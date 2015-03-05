@@ -14,7 +14,7 @@ Rb1 b1 c2 330
 Rb3 b2 c1 330
 Rb2 b1 ee 500
 Rb4 b2 ee 500
-Cc e1 e2 .175E-10
+Cc e1 e2 14E-9
 
 
 * .model <name> <type> (par1=value1 par2=value2 ...)
@@ -25,8 +25,8 @@ Cc e1 e2 .175E-10
 * TS = transport saturation current
 * NF = forward mode ideality factor
 
-.model model1 npn (BF=176 CJC=5p CJE=5p IS=1E-16 VAF=300 NF=1)
-.model model2 npn (BF=150 CJC=5p CJE=5p IS=1E-16 VAF=300 NF=1)
+.model model1 npn (BF=176 CJC=3.291p CJE=5.255p IS=1E-16 VAF=121 NF=1)
+.model model2 npn (BF=153 CJC=3.199p CJE=5.235p IS=1E-16 VAF=120 NF=1)
 
 .control
 set filetype=ascii
@@ -36,7 +36,7 @@ tran 1E-10 1E-6 1E-10
 plot v(c1)
 write simple-transient.txt v(c1)
 
-tran 1E-10 11E-7 10E-7 1E-10
+tran 1E-8 11E-5 10E-5 1E-8
 plot v(c1) v(c2) 
 plot v(e1)-v(e2)
 write simple-steady.txt v(c1) v(c2) v(e1)-v(e2)
