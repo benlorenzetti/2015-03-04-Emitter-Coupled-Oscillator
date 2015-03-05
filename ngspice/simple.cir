@@ -1,0 +1,44 @@
+*** simple.cir ***
+* Nodes:
+* cc, ee, c1, b1, e1, c2, b2, e2
+
+Vcc cc gnd dc 0V ac 0V
+Vee ee gnd dc -5V ac 0V
+Rc1 cc c1 250
+Rc2 cc c2 250 
+Q1 c1 b1 e1 model1
+Q2 c2 b2 e2 model2
+Re1 e1 ee 175
+Re2 e2 ee 175
+Rb1 b1 c2 330
+Rb3 b2 c1 330
+Rb2 b1 ee 500
+Rb4 b2 ee 500
+Cc e1 e2 .175E-10
+
+
+* .model <name> <type> (par1=value1 par2=value2 ...)
+* VAF = forward Early voltage
+* BF = forward beta; forward common-emitter gain
+* CJE = base-emitter zero-bias junction capacitance
+* CJC = base-collector zero-bias junction capacitance
+* TS = transport saturation current
+* NF = forward mode ideality factor
+
+.model model1 npn (BF=176 CJC=5p CJE=5p IS=1E-16 VAF=300 NF=1)
+.model model2 npn (BF=150 CJC=5p CJE=5p IS=1E-16 VAF=300 NF=1)
+
+.control
+set filetype=ascii
+* tran <tstep> <tstop> <tstart> <tmax> ; the last two are optional
+
+tran 1E-10 1E-6 1E-10
+plot v(c1)
+write simple-transient.txt v(c1)
+
+tran 1E-10 11E-7 10E-7 1E-10
+plot v(c1) v(c2) 
+plot v(e1)-v(e2)
+write simple-steady.txt v(c1) v(c2) v(e1)-v(e2)
+
+
