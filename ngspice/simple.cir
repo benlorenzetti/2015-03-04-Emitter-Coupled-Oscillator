@@ -3,18 +3,18 @@
 * cc, ee, c1, b1, e1, c2, b2, e2
 
 Vcc cc gnd dc 0V ac 0V
-Vee ee gnd dc -5V ac 0V
-Rc1 cc c1 250
-Rc2 cc c2 250 
+Vee ee gnd dc -3.3V ac 0V
+Rc1 cc c1 167
+Rc2 cc c2 167 
 Q1 c1 b1 e1 model1
 Q2 c2 b2 e2 model2
-Re1 e1 ee 175
-Re2 e2 ee 175
-Rb1 b1 c2 330
-Rb3 b2 c1 330
-Rb2 b1 ee 500
-Rb4 b2 ee 500
-Cc e1 e2 14E-9
+Re1 e1 ee 90
+Re2 e2 ee 90
+Rb1 b1 c2 500
+Rb3 b2 c1 500
+Rb2 b1 ee 584
+Rb4 b2 ee 584
+Cc e1 e2 2E-11
 
 
 * .model <name> <type> (par1=value1 par2=value2 ...)
@@ -36,7 +36,7 @@ tran 1E-10 1E-6 1E-10
 plot v(c1)
 write simple-transient.txt v(c1)
 
-tran 1E-8 11E-5 10E-5 1E-8
+tran 1E-10 101E-7 100E-7 1E-10
 plot v(c1) v(c2) 
 plot v(e1)-v(e2)
 write simple-steady.txt v(c1) v(c2) v(e1)-v(e2)

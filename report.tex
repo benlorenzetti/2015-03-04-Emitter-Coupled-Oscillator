@@ -79,4 +79,106 @@ switching junctions and improve output resistance.
 
 ADVANCED CIRCUIT DIAGRAM
 
+\section{Theory}
+
+\subsection{Bistable Latch}
+
+A digital latch can be built with two cross-connected BJT amplifiers, shown in figure
+\ref{latch}. The amplifiers should be nearly mirror images of one another and the
+coupling networks should be entirely resistive, shown in figure 
+\ref{latch-block-diagram}.
+
+LATCH  AND LATCH BLOCK DIAGRAM
+
+The latch is bistable, meaning it has two self-sustaining states.
+Either Q1 is saturated while Q2 is cutoff, or Q1 is cutoff while Q2 is saturated.
+The circuit is a symmetric loop, so it is not clear where to begin any analysis.
+Instead of starting at a particular node and time, we will start with some sanity
+assumptions and determining the conditions that make them true.
+
+First, we assume that the switching transistors are always driven at saturation or cutoff,
+and that the saturation/cutoff transistors will not switch except due to external triggers.
+Most of the following analysis will be spent making this assumption true.
+
+Second, we assume that the current diverted through the cross-connections is negligible
+relative to the on transistor's saturation current.
+\begin{equation*}
+I_{Bias}<<I_{C(sat)}
+\end{equation*}
+
+Third, we assume that the base current of the on transistor is negligible
+relative to the current through its biasing network.
+\footnote{the stiff base bias condition}
+\begin{equation*}
+I_B(sat)<<I_{Bias}
+\end{equation*}
+
+The second and third criteria compete with each other because the base and collector currents
+are related by the forward current amplification ratio, $\beta$.
+The best way to satisfy both conditions is with the square root of $\beta$.
+\begin{equation}
+I_{Bias}=\frac{I_{C(sat)}}{\sqrt{\beta}}
+\end{equation}
+
+These three assumptions allow us to analyze half of the circuit in isolation, which is shown
+in figure \ref{half-latch}.
+
+The output voltage has two states, depending on whether the transistor is the one in saturation
+or in cutoff.
+\begin{equation}
+V_{o}=\left\{
+	\begin{array}{lr}
+	V_{CC}	& : \textrm{cutoff} \\
+	V_{CC}-I_{C(sat)}R_{C}	& : \textrm{saturation}
+	\end{array}
+\right.
+\label{bistable-latch-output-voltages}
+\end{equation}
+
+With the assumption that the other transistor has the opposite state, then the input from the
+cross-connection has the opposite value of $V_{o}$, and is stable. The bias network is a voltage
+divider if the base current is negligible, so the base voltage is
+\begin{equation*}
+V_{B}=\frac{R_{2}}{R_{1}+R_{2}}(V_{o}^{'}-V_{EE})+V_{EE}
+\end{equation*}
+
+It is helpful to break this into a piecewise function corresponding to the states in equation
+\ref{bistable-latch-output-voltages}.
+\begin{equation}
+V_{B}=\left\{
+	\begin{array}{lr}
+	\frac{R_{2}}{R_{1}+R_{2}}(V_{CC}-I_{C(sat)}R_{C}-V_{EE})+V_{EE}	& : \textrm{cutoff}	\\
+	\frac{R_{2}}{R_{1}+R_{2}}(V_{CC}-V_{EE})+V_{EE}	& : \textrm{saturation}	\\
+	\end{array}
+\right.
+\label{latch-b-equations}
+\end{equation}
+
+If the transistor is cutoff, there is no emitter current, and the emitter voltage lies at $V_{EE}$.
+For this to be true, the base-emitter junctions must be biased less than $V_{BE(on)}$.
+If the transistor is on, the base-emitter junction will be $V_{BE(on)}$, and the saturation
+current will be determined by the emitter resistance.
+\begin{equation}
+\left\{
+	\begin{array}{lr}
+	V_{B}<V_{EE}+V_{BE(on)}	& : \textrm{cutoff}	\\
+	V_{B}=V_{EE}+V_{BE(on)}+I_{C(sat)}R_{E}	& : \textrm{saturation}
+	\end{array}
+\right.
+\label{latch-be-conditions}
+\end{equation}
+
+Combining equations \ref{latch-b-equations} and \ref{latch-be-conditions} gives two independent
+conditions without a base voltage term.
+\begin{equation*}
+\left\{
+	\begin{array}{lr}
+	\frac{R_{2}}{R_{1}+R_{2}}<\frac{V_{BE(on)}}{V_{CC}-I_{C}R_{C}-V_{EE}}	& : \textrm{cutoff}	\\
+	\frac{R_{2}}{R_{1}+R_{2}}=\frac{V_{BE(on)}+I_{C}R_{E}}{V_{CC}-V_{EE}}	& : \textrm{saturation}	\\
+	\end{array}
+\right.
+\end{equation*}
+
+\subsection{Astable Multivibrator}
+
 \end{document}
