@@ -1,0 +1,56 @@
+*** advanced.cir ***
+* Nodes:
+* cc, ee, c8, b8, e8, c9, b9, e9, e3, e4, b567, e5, e6, e7
+
+Vcc cc gnd dc 12V ac 0V
+Vee ee gnd dc -12V ac 0V
+Rc1 cc c8 167
+Rc2 cc c9 167 
+Q1 c8 b8 e8 model8
+Q2 c9 b9 e9 model9
+Rb1 b8 e3 1000
+Rb3 b9 e4 1000
+Rb2 b8 ee 1000
+Rb4 b9 ee 1000
+Q3 cc c9 e3 model3
+Q4 cc c8 e4 model4
+Cc e8 e9 1E-11
+Q5 e8 b567 e5 model5
+Q6 e9 b567 e6 model6
+Q7 b567 b567 e7 model7
+Rref cc b567 4k
+Re5 e5 ee 50
+Re6 e6 ee 50
+Re7 e7 ee 50
+
+
+* .model <name> <type> (par1=value1 par2=value2 ...)
+* VAF = forward Early voltage
+* BF = forward beta; forward common-emitter gain
+* CJE = base-emitter zero-bias junction capacitance
+* CJC = base-collector zero-bias junction capacitance
+* TS = transport saturation current
+* NF = forward mode ideality factor
+
+.model model8 npn (BF=175 CJC=3.306p CJE=5.242p IS=1E-16 VAF=89.5 NF=1)
+.model model9 npn (BF=201 CJC=3.222p CJE=4.964p IS=1E-16 VAF=119 NF=1)
+.model model3 npn (BF=294 CJC=4.224p CJE=9.605p IS=1E-16 VAF=116 NF=1)
+.model model4 npn (BF=171 CJC=3.304p CJE=5.291p IS=1E-16 VAF=118 NF=1)
+.model model5 npn (BF=171 CJC=3.309p CJE=5.252p IS=1E-16 VAF=118 NF=1)
+.model model6 npn (BF=170 CJC=3.306p CJE=5.213p IS=1E-16 VAF=117 NF=1)
+.model model7 npn (BF=170 CJC=3.288p CJE=5.287p IS=1E-16 VAF=117 NF=1)
+
+.control
+set filetype=ascii
+* tran <tstep> <tstop> <tstart> <tmax> ; the last two are optional
+
+tran 1E-10 1E-6 1E-10
+plot v(c8)
+write advanced-transient.txt v(c8)
+
+tran 1E-10 101E-7 100E-7 1E-10
+plot v(c8) v(c9) 
+plot v(e8)-v(e9)
+write advanced-steady.txt v(c8) v(c9) v(e8)-v(e9)
+
+
