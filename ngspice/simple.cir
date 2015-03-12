@@ -10,11 +10,11 @@ Q1 c1 b1 e1 model1
 Q2 c2 b2 e2 model2
 Re1 e1 ee 90
 Re2 e2 ee 90
-Rb1 b1 c2 500
-Rb3 b2 c1 500
+Rb1 b1 c2 1083
+Rb3 b2 c1 1083
 Rb2 b1 ee 584
 Rb4 b2 ee 584
-Cc e1 e2 2E-11
+Cc e1 e2 1E-10
 
 
 * .model <name> <type> (par1=value1 par2=value2 ...)

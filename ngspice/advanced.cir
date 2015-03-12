@@ -14,7 +14,7 @@ Rb2 b8 ee 1000
 Rb4 b9 ee 1000
 Q3 cc c9 e3 model3
 Q4 cc c8 e4 model4
-Cc e8 e9 1E-11
+Cc e8 e9 2E-11
 Q5 e8 b567 e5 model5
 Q6 e9 b567 e6 model6
 Q7 b567 b567 e7 model7
@@ -22,7 +22,6 @@ Rref cc b567 4k
 Re5 e5 ee 50
 Re6 e6 ee 50
 Re7 e7 ee 50
-
 
 * .model <name> <type> (par1=value1 par2=value2 ...)
 * VAF = forward Early voltage
