@@ -118,6 +118,7 @@ are related by the forward current amplification ratio, $\beta$.
 The best way to satisfy both conditions is with the square root of $\beta$.
 \begin{equation}
 I_{Bias}=\frac{I_{C(sat)}}{\sqrt{\beta}}
+\label{i-bias-eq}
 \end{equation}
 
 These three assumptions allow us to analyze half of the circuit in isolation, which is shown
@@ -170,15 +171,24 @@ current will be determined by the emitter resistance.
 
 Combining equations \ref{latch-b-equations} and \ref{latch-be-conditions} gives two independent
 conditions without a base voltage term.
-\begin{equation*}
+\begin{equation}
 \left\{
 	\begin{array}{lr}
-	\frac{R_{2}}{R_{1}+R_{2}}<\frac{V_{BE(on)}}{V_{CC}-I_{C}R_{C}-V_{EE}}	& : \textrm{cutoff}	\\
-	\frac{R_{2}}{R_{1}+R_{2}}=\frac{V_{BE(on)}+I_{C}R_{E}}{V_{CC}-V_{EE}}	& : \textrm{saturation}	\\
+	\frac{R_{2}}{R_{1}+R_{2}}<\frac{V_{BE(on)}}{V_{CC}-I_{C(sat)}R_{C}-V_{EE}}	& : \textrm{cutoff}	\\
+	\frac{R_{2}}{R_{1}+R_{2}}=\frac{V_{BE(on)}+I_{C(sat)}R_{E}}{V_{CC}-V_{EE}}	& : \textrm{saturation}	\\
 	\end{array}
 \right.
-\end{equation*}
+\end{equation}
+
+In addition two these two conditions for stability of the latch,
+the summation $R_{1}+R_{2}$ must be designed to satisfy the bias current assumpations.
+Solving Ohm's law with the collector voltage and $I_{bias}$ from equation \ref{i-bias-eq} gives
+\begin{equation}
+R_{1}+R_{2}=\frac{\sqrt{\beta}(V_{CC}-I_{C(sat)}R_{C}-V_{EE})}{I_{C(sat)}}
+\end{equation}
 
 \subsection{Astable Multivibrator}
+
+
 
 \end{document}
