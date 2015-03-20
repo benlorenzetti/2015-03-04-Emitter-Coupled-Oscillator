@@ -1,0 +1,36 @@
+clear
+clf
+% simple_multivibrator.m
+%
+% The following 5 parameters can be either a scalar or an array.
+% Entering 4 as scalars and 1 as an array allows exploring the effects
+% of each on the frequency of oscillation.
+% No checks are made on whether oscillations would actually occur.
+%
+Vcc = 5;
+Vpkpk = 2.4;
+IcSat = .012;
+Ce = 1E-12:1E-13:1E-9;
+beta = 100;
+%
+% The following matrix operations follow the design equations in the
+% sections titled "Bistable Latch" and "Astable Multivibrator" of my report.
+%
+Rc = Vpkpk./IcSat;
+R1plusR2 = sqrt(beta) .* (Vcc ./ IcSat);
+VoltageDividerRatio = ((Vcc - Vpkpk) ./ Vcc);
+R2 = R1plusR2 .* VoltageDividerRatio;
+R1 = R1plusR2 - R2;
+VeTrig = (VoltageDividerRatio .* (Vcc - Vpkpk)) - 0.7;
+VeSat = (VoltageDividerRatio .* Vcc) - 0.7;
+Re = VeSat ./ IcSat;
+T = (Ce.*Re) .* log ((2*VeSat - VeTrig)./VeTrig);
+f = 1 ./ (2 * T);
+%
+% The plot below should be edited for whichever parameter you are testing.
+%
+semilogx (Ce, f);
+% plot (Vcc, f);
+title ('Frequency of Oscillation vs. Coupling Capacitance');
+xlabel ('Ce (F)');
+ylabel ('f (Hz)');
