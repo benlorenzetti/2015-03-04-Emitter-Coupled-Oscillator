@@ -242,9 +242,9 @@ To make an oscillator, the circuit should be quasistable--i.e. it should be stab
 specific length of time. After a period of stable output, an internal trigger cause a change of state.
 For the emitter-coupled oscillator, the trigger is the emitter potential of the cutoff transistor
 falling below $V_{E(off)}$. From equation \ref{stability-conditions}, the cutoff state is stable while
-\begin{equation}
+\begin{equation*}
 V_{E(off)}>\frac{R_{2}}{R_{1}+R_{2}}(V_{CC}-V_{pkpk})-V_{BE(on)}
-\end{equation}
+\end{equation*}
 
 The capacitor prevents instantaneous voltage changes, so it takes some time for $V_{E}$
 to fall below this trigger threshold. We expect an RC time constant for the discharge to be on
@@ -253,9 +253,7 @@ order of $\tau=R_{E}C_{E}$, but solving for the transient equation may give addi
 i(t)=C\frac{dv(t)}{dt} \quad \quad \textrm{resists instantaneous } \delta V
 \end{equation*}
 
-\clearpage
-
-The cross-connected bases make the transistors behave somewhat like a constant voltage source.
+The cross-connected bases make the transistors behave somewhat like a emitter-follower voltage source.
 If we assume that switching times for the transistors is negligible, then the transient circuit
 is as shown in figure \ref{simple-transient-circuit}. This assumption is true if the base-emitter
 capacitance is negligible, and so is the delay in the BJT due to the rate of minority carrier diffusion.
@@ -266,5 +264,139 @@ capacitance is negligible, and so is the delay in the BJT due to the rate of min
 	\caption{Transient Circuit for Simple Emitter-Coupled Oscillator}
 	\label{simple-transient-circuit}
 \end{figure}
+
+At t=0, $Q_{2}$ triggers itself on by $v_{E2}$ falling below the threshold.
+In turn, this forces $Q_{1}$ off through the cross connection.
+This trigger occurs when $v_{E2(off)}$ breaks the stability condition.
+\begin{equation}
+V_{E(trig)}=\frac{R_{2}}{R_{1}+R_{2}}(V_{CC}-V_{pkpk})-V_{BE(on)}
+\end{equation}
+
+Immediately before the trigger occurs, the voltage at E1 is $V_{E(sat)}$ and
+the voltage at E2 is the trigger voltage $V_{E(trig)}$.
+So, the initial voltage across the capacitor is
+\begin{equation}
+v_{C}(0^{-})=V_{E(sat)}-V_{E(trig)}
+\end{equation}
+
+With the initial conditions in hand, we are ready to analyze the transient circuit.
+After switching, $R_{E2}$ does not matter because $Q_{2}$ acts like a voltage source.
+Consequently there is only one loop to analyze: the $v_{E1}$ discharge loop.
+The differential equation describing the loop is found from Kirchoff's Voltage Law.
+\begin{equation}
+v_{E1}(t):=\quad R_{E}i_{C}(t)=V_{E(sat)}u(t)+v_{C}(t)
+\label{ve1-kvl}
+\end{equation}
+
+\begin{equation*}
+R_{E}\left(-C_{E}\frac{dv_{C}(t)}{dt}\right)=V_{E(sat)}u(t)+v_{C}(t)
+\end{equation*}
+
+\begin{equation}
+\frac{d}{dt}v_{C}(t)+\frac{1}{R_{E}C_{E}}v_{C}(t)=\frac{-V_{E(sat)}}{R_{E}C_{E}}u(t)
+\end{equation}
+
+The system will be easier to solve in frequency domain. Taking the Laplace transform gives
+\begin{equation*}
+sV_{C}(s)-v_{C}(0^{-})+\frac{1}{R_{E}C_{E}}V_{C}(s)=\frac{-V_{E(sat)}}{sR_{E}C_{E}}
+\end{equation*}
+
+\begin{equation*}
+V_{C}(s)\left[s^{2}+\frac{s}{R_{E}C_{E}}\right]=
+sv_{C}(0^{-})-\frac{V_{E(sat)}}{R_{E}C_{E}}
+\end{equation*}
+
+\begin{equation*}
+V_{C}(s)=\frac{sv_{C}(0^{-})-\frac{V_{E(sat)}}{R_{E}C_{E}}}
+{s(s+\frac{1}{R_{E}C_{E})}}
+\end{equation*}
+
+\begin{equation*}
+V_{C}(s)=[V_{E(sat)}-V_{E(trig)}]\left[
+\frac{s-\frac{V_{E(sat)}}{R_{E}C_{E}(V_{E(sat)}-V_{E(trig)})}}
+{s(s+\frac{1}{R_{E}C_{E}})}\right]
+\end{equation*}
+
+\begin{equation}
+V_{C}(s)=C\frac{s-f_{1}}{s(s+f_{0})}\quad\textrm{where}
+	\left\{
+	\begin{array}{lr}
+	C=V_{E(sat)}-V_{E(trig)}	\\
+	f_{0}=\frac{1}{R_{E}C_{E}}	\\
+	f_{1}=f_{0}\frac{V_{E(sat)}}{C}
+	\end{array}
+	\right.
+\label{transfer-parameters}
+\end{equation}
+
+Before converting back to time domain, a partial fraction expansion must be done.
+\begin{equation*}
+\frac{s-f_{1}}{s(s+f_{0})}=\frac{A}{s}+\frac{B}{s+f_{0}}=\frac{A(s+f_{0})+Bs}{s(s+f_{0})}
+\end{equation*}
+
+\begin{equation*}
+s-f_{1}=A(s+f_{0})+Bs
+\end{equation*}
+
+Polynomial terms of different order are linearly independent, so this equation can be broken
+into simultaneous equations.
+\begin{equation*}
+	\left\{
+	\begin{array}{lr}
+	1=A+B	\\
+	-f_{1}=Af_{0}
+	\end{array}
+	\right.
+\end{equation*}
+
+Solving the simultaneous system gives
+\begin{equation}
+	\left\{
+	\begin{array}{lr}
+	A=\frac{-f_{1}}{f_{0}}=\frac{-V_{E(sat)}}{C}	\\
+	B=1-A=1+\frac{V_{E(sat)}}{C}
+	\end{array}
+	\right.
+\label{partial-fraction-coefficients}
+\end{equation}
+
+
+and expanded frequency domain equation is
+\begin{equation}
+V_{C}(s)=C\left(\frac{A}{s}+\frac{B}{s-f_{0}}\right)
+\end{equation}
+
+Converting back to time domain gives
+\begin{equation*}
+v_{C}(t)=CAu(t)+CBe^{-f_{0}t}
+\end{equation*}
+
+Substituting values for A, B, and C from equations
+\ref{transfer-parameters} and \ref{partial-fraction-coefficients}
+describes the voltage across the capacitor as a function of time.
+\begin{equation*}
+v_{C}(t)=-V_{E(sat)}+(2V_{E(sat)}-V_{E(trig)})e^{\nicefrac{-t}{R_{E}C_{E}}}
+\end{equation*}
+
+Substituting this description of $v_{C}(t)$ into the right hand side of
+the equation \ref{ve1-kvl} gives the final solution for discharging voltage
+at the off emitter.
+\begin{equation}
+v_{E(off)}(t)=[2V_{E(sat)}-V_{E(trig)}]e^{\nicefrac{-t}{R_{E}C_{E}}}
+\end{equation}
+
+The lifetime of this output state is as long as it takes for $v_{E(off)}$ to reach $V_{E(trig)}$.
+\begin{equation*}
+V_{E(trig)}=[2V_{E(sat)}-V_{E(trig)}]e^{\nicefrac{-T_{stability}}{R_{E}C_{E}}}
+\end{equation*}
+
+\begin{equation*}
+T_{stability}=R_{E}C_{E}ln\left(\frac{2V_{E(sat)}-V_{E(trig)}}{V_{E(trig)}}\right)
+\end{equation*}
+
+There are two stable states per period of the square wave, so the frequency of oscillation is
+\begin{equation}
+f=\frac{1}{2T_{stability}}=\frac{1}{2R_{E}C_{E}ln\left(\frac{2V_{E(sat)}-V_{E(trig)}}{V_{E(trig)}}\right)}
+\end{equation}
 
 \end{document}
