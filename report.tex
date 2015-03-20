@@ -96,98 +96,120 @@ The circuit is a symmetric loop, so it is not clear where to begin any analysis.
 Instead of starting at a particular node and time, we will start with some sanity
 assumptions and determining the conditions that make them true.
 
-First, we assume that the switching transistors are always driven at saturation or cutoff,
-and that the saturation/cutoff transistors will not switch except due to external triggers.
-Most of the following analysis will be spent making this assumption true.
+If the transistors operate digitally--i.e. either in saturation or cutoff--then the output
+can have two possible values, the difference between which will be called $V_{pkpk}$.
+This difference is set by $R_{C}$ and the saturation current.
+\begin{equation}
+R_{C}=\frac{V_{pkpk}}{I_{C(sat)}}
+\label{rc-eq}
+\end{equation}
 
-Second, we assume that the current diverted through the cross-connections is negligible
-relative to the on transistor's saturation current.
+Of course, this assumes that the current through $R_{1}$ and $R_{2}$ is negligible compared to $I_{C(sat)}$.
 \begin{equation*}
 I_{Bias}<<I_{C(sat)}
 \end{equation*}
 
-Third, we assume that the base current of the on transistor is negligible
-relative to the current through its biasing network.
-\footnote{the stiff base bias condition}
+Another design assumption is the stiff base bias.
+In order to stiffly bias the transistors, the base currents should draw negligible current
+relative to $R_{1}$ and $R_{2}$.
 \begin{equation*}
-I_B(sat)<<I_{Bias}
+I_{B(sat)}<<I_{Bias}
 \end{equation*}
 
-The second and third criteria compete with each other because the base and collector currents
-are related by the forward current amplification ratio, $\beta$.
-The best way to satisfy both conditions is with the square root of $\beta$.
+These two biasing network equations
+compete with each other because the base and collector currents are related by $\beta$.
+The best way to satisfy both is
 \begin{equation}
 I_{Bias}=\frac{I_{C(sat)}}{\sqrt{\beta}}
+\label{i-bias-design-decision}
+\end{equation}
+
+If the supply voltage is relatively large compared to the output amplitude,
+then $I_{Bias}$ varies little with binary state and is set by $R_{1}$ and $R_{2}$.
+\begin{equation}
+I_{Bias}=\frac{V_{CC}}{R_{1}+R_{2}}
 \label{i-bias-eq}
 \end{equation}
 
-These three assumptions allow us to analyze half of the circuit in isolation, which is shown
-in figure \ref{half-latch}.
-
-The output voltage has two states, depending on whether the transistor is the one in saturation
-or in cutoff.
+Combining equations \ref{i-bias-design-decision} and \ref{i-bias-eq} helps in designing
+the bias network.
 \begin{equation}
-V_{o}=\left\{
-	\begin{array}{lr}
-	V_{CC}	& : \textrm{cutoff} \\
-	V_{CC}-I_{C(sat)}R_{C}	& : \textrm{saturation}
-	\end{array}
-\right.
-\label{bistable-latch-output-voltages}
+R_{1}+R_{2}=\frac{\sqrt{\beta}V_{CC}}{I_{C(sat)}}
 \end{equation}
 
-With the assumption that the other transistor has the opposite state, then the input from the
-cross-connection has the opposite value of $V_{o}$, and is stable. The bias network is a voltage
-divider if the base current is negligible, so the base voltage is
+The analysis so far has assumed that the saturation current is fixed,
+but should it be fixed with $R_{C}$ or $R_{E}$?
+It makes more sense to limit $I_{C(sat)}$ with $R_{C}$ because
+later we will be adding a reactive element to the emitters.
+
+For the transistor to be driven to saturation, $V_{CE}$ is approximately equal to $V_{BE(on)}$
+and the collector is equipotential with the base. The collector potential
+during saturation is the lesser of the two binary outputs, so
+\begin{equation}
+V_{B(sat)}=V_{CC}-V_{pkpk}
+\label{saturation-condition}
+\end{equation}
+
+For the other transistor to be cutoff,
+the base-emitter junction must not have achieved the forward bias potential.
+\begin{equation}
+V_{B(off)}<V_{E(off)}-V_{BE(on)}
+\label{cutoff-condition}
+\end{equation}
+
+The transistors are cross-connected from their outputs to the opposite bases, so the base bias
+is dependent on the opposite transistor's state. The bias networks are voltage dividers and the output
+has two states, so the base potential is one of the two following values.
 \begin{equation*}
-V_{B}=\frac{R_{2}}{R_{1}+R_{2}}(V_{o}^{'}-V_{EE})+V_{EE}
+V_{B}=
+\left\{
+	\begin{array}{lr}
+	\frac{R_{2}}{R_{1}+R_{2}}V_{CC}	& : \textrm{saturation transistor}	\\
+	\frac{R_{2}}{R_{1}+R_{2}}(V_{CC}-V_{pkpk})	& : \textrm{cutoff transistor}
+	\end{array}
+\right.
 \end{equation*}
 
-It is helpful to break this into a piecewise function corresponding to the states in equation
-\ref{bistable-latch-output-voltages}.
-\begin{equation}
-V_{B}=\left\{
+Combining the required conditions for saturation and cutoff from equations
+\ref{saturation-condition} and \ref{cutoff-condition}
+with the two biasing potentials gives the conditions for stability of the latch.
+\begin{equation*}
+\left\{
 	\begin{array}{lr}
-	\frac{R_{2}}{R_{1}+R_{2}}(V_{CC}-I_{C(sat)}R_{C}-V_{EE})+V_{EE}	& : \textrm{cutoff}	\\
-	\frac{R_{2}}{R_{1}+R_{2}}(V_{CC}-V_{EE})+V_{EE}	& : \textrm{saturation}	\\
+	\frac{R_{2}}{R_{1}+R_{2}}V_{CC}=V_{CC}-V_{pkpk}	& : \textrm{saturation stability}	\\
+	\frac{R_{2}}{R_{1}+R_{2}}(V_{CC}-V_{pk-pk})<V_{E(off)}+V_{BE(on)}	& : \textrm{cutoff stability}
 	\end{array}
 \right.
-\label{latch-b-equations}
-\end{equation}
+\end{equation*}
 
-If the transistor is cutoff, there is no emitter current, and the emitter voltage lies at $V_{EE}$.
-For this to be true, the base-emitter junctions must be biased less than $V_{BE(on)}$.
-If the transistor is on, the base-emitter junction will be $V_{BE(on)}$, and the saturation
-current will be determined by the emitter resistance.
+A latch is only useful if the output is self-sustaining, so these two conditions must both be met.
+The first condition has all fixed values, so the ratio $\nicefrac{R_{2}}{R_{1}+R_{2}}$ must be chosen there.
+The second condition can then be rearranged to separate fixed values from as-yet-undetermined values.
 \begin{equation}
 \left\{
 	\begin{array}{lr}
-	V_{B}<V_{EE}+V_{BE(on)}	& : \textrm{cutoff}	\\
-	V_{B}=V_{EE}+V_{BE(on)}+I_{C(sat)}R_{E}	& : \textrm{saturation}
+	\frac{R_{2}}{R_{1}+R_{2}}=\frac{V_{CC}-V_{pkpk}}{V_{CC}}	& : \textrm{saturation stability}	\\
+	V_{E(off)}>\frac{R_{2}}{R_{1}+R_{2}}(V_{CC}-V_{pkpk})-V_{BE(on)}	& : \textrm{cutoff stability}
 	\end{array}
 \right.
-\label{latch-be-conditions}
+\label{stability-conditions}
 \end{equation}
 
-Combining equations \ref{latch-b-equations} and \ref{latch-be-conditions} gives two independent
-conditions without a base voltage term.
-\begin{equation}
-\left\{
-	\begin{array}{lr}
-	\frac{R_{2}}{R_{1}+R_{2}}<\frac{V_{BE(on)}}{V_{CC}-I_{C(sat)}R_{C}-V_{EE}}	& : \textrm{cutoff}	\\
-	\frac{R_{2}}{R_{1}+R_{2}}=\frac{V_{BE(on)}+I_{C(sat)}R_{E}}{V_{CC}-V_{EE}}	& : \textrm{saturation}	\\
-	\end{array}
-\right.
-\end{equation}
-
-In addition two these two conditions for stability of the latch,
-the summation $R_{1}+R_{2}$ must be designed to satisfy the bias current assumpations.
-Solving Ohm's law with the collector voltage and $I_{bias}$ from equation \ref{i-bias-eq} gives
-\begin{equation}
-R_{1}+R_{2}=\frac{\sqrt{\beta}(V_{CC}-I_{C(sat)}R_{C}-V_{EE})}{I_{C(sat)}}
-\end{equation}
+The stability conditions for both transistors would have to be followed if we were
+designing digital memory. However, for an oscillator we only want quasi-stable states;
+in the next section we will violate the stability by adding reative coupling to affect $V_{E}$ of the off transistor.
 
 \subsection{Astable Multivibrator}
+
+The simple circuit for an astable multivibrator is shown in figure \ref{simple-circuit-diagram}.
+Topologically it is easy to make--just add a capactitor to a BJT latch.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.6\textwidth]{images/simple-circuit-diagram}
+	\caption{Simple Version of Astable Multivibrator}
+	\label{simple-circuit-diagram}
+\end{figure}
 
 
 

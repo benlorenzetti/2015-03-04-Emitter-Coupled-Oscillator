@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.28)  18 MAR 2015 19:55
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.28)  19 MAR 2015 20:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -346,23 +346,30 @@ e 89.
 
 [2
 
-]
+] [3]
 
-LaTeX Warning: Reference `half-latch' on page 3 undefined on input line 125.
+! LaTeX Error: File `images/simple-circuit-diagram' not found.
 
-[3] (./report.aux)
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.209 ...textwidth]{images/simple-circuit-diagram}
+                                                  
+? 
+[4] (./report.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4317 strings out of 493304
- 63651 string characters out of 6139871
- 142837 words of memory out of 5000000
- 7710 multiletter control sequences out of 15000+600000
+ 4338 strings out of 493304
+ 63833 string characters out of 6139871
+ 142861 words of memory out of 5000000
+ 7716 multiletter control sequences out of 15000+600000
  9023 words of font info for 33 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,9n,38p,789b,187s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,9n,38p,789b,275s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texl
@@ -376,12 +383,11 @@ s/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
 6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on report.pdf (5 pages, 171258 bytes).
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on report.pdf (6 pages, 163164 bytes).
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
- 60 compressed objects within 1 object stream
+ 83 PDF objects out of 1000 (max. 8388607)
+ 59 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
