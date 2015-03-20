@@ -79,16 +79,21 @@ switching junctions and improve output resistance.
 
 ADVANCED CIRCUIT DIAGRAM
 
+\clearpage
 \section{Theory}
 
 \subsection{Bistable Latch}
 
 A digital latch can be built with two cross-connected BJT amplifiers, shown in figure
-\ref{latch}. The amplifiers should be nearly mirror images of one another and the
-coupling networks should be entirely resistive, shown in figure 
-\ref{latch-block-diagram}.
+\ref{latch-circuit-diagram}. The amplifiers should be nearly mirror images of one another and the
+coupling networks should be entirely resistive.
 
-LATCH  AND LATCH BLOCK DIAGRAM
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.6\textwidth]{diagrams/latch-circuit}
+	\caption{BJT Implementation of a Digital Latch}
+	\label{latch-circuit-diagram}
+\end{figure}
 
 The latch is bistable, meaning it has two self-sustaining states.
 Either Q1 is saturated while Q2 is cutoff, or Q1 is cutoff while Q2 is saturated.
@@ -160,7 +165,7 @@ V_{B(off)}<V_{E(off)}-V_{BE(on)}
 The transistors are cross-connected from their outputs to the opposite bases, so the base bias
 is dependent on the opposite transistor's state. The bias networks are voltage dividers and the output
 has two states, so the base potential is one of the two following values.
-\begin{equation*}
+\begin{equation}
 V_{B}=
 \left\{
 	\begin{array}{lr}
@@ -168,7 +173,8 @@ V_{B}=
 	\frac{R_{2}}{R_{1}+R_{2}}(V_{CC}-V_{pkpk})	& : \textrm{cutoff transistor}
 	\end{array}
 \right.
-\end{equation*}
+\label{base-voltages}
+\end{equation}
 
 Combining the required conditions for saturation and cutoff from equations
 \ref{saturation-condition} and \ref{cutoff-condition}
@@ -199,6 +205,7 @@ The stability conditions for both transistors would have to be followed if we we
 designing digital memory. However, for an oscillator we only want quasi-stable states;
 in the next section we will violate the stability by adding reative coupling to affect $V_{E}$ of the off transistor.
 
+\clearpage
 \subsection{Astable Multivibrator}
 
 The simple circuit for an astable multivibrator is shown in figure \ref{simple-circuit-diagram}.
@@ -206,11 +213,58 @@ Topologically it is easy to make--just add a capactitor to a BJT latch.
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=0.6\textwidth]{images/simple-circuit-diagram}
+	\includegraphics[width=0.6\textwidth]{diagrams/simple-circuit}
 	\caption{Simple Version of Astable Multivibrator}
 	\label{simple-circuit-diagram}
 \end{figure}
 
+The top half of the circuit is the same as the latch.
+The relationships between $I_{C(sat)}$ and $V_{pkpk}$ to $R_{C}$, $R_{1}$, and $R_{2}$
+is the same as in equations \ref{rc-eq} through \ref{stability-conditions}.
+Now for the bottom half.
 
+The emitter potential for the saturation transistor is set by the top half because
+it follow the base. Taking the saturation base voltage from equation \ref{base-voltages}...
+\begin{equation}
+V_{E(sat)}=\frac{R_{2}}{R_{1}+R_{2}}V_{CC}-V_{BE(on)}
+\end{equation}
+
+In a perfect world,
+this emitter voltage would hold regardless of $R_{E}$.\footnote{Actually in a perfect world, I would have already graduated.}
+However, in the interest of not burning up the base-emitter junction, $R_{E}$
+should probably be just short of becoming the saturation current limiter.
+\begin{equation}
+R_{E}=\frac{V_{E(sat)}}{I_{E(sat)}}=\frac{\frac{R_{2}}{R_{1}+R_{2}}V_{CC}-V_{BE(on)}}{I_{C(sat)}}
+\end{equation}
+
+Equation \ref{stability-conditions} described the stability conditions for the latch.
+To make an oscillator, the circuit should be quasistable--i.e. it should be stable for some
+specific length of time. After a period of stable output, an internal trigger cause a change of state.
+For the emitter-coupled oscillator, the trigger is the emitter potential of the cutoff transistor
+falling below $V_{E(off)}$. From equation \ref{stability-conditions}, the cutoff state is stable while
+\begin{equation}
+V_{E(off)}>\frac{R_{2}}{R_{1}+R_{2}}(V_{CC}-V_{pkpk})-V_{BE(on)}
+\end{equation}
+
+The capacitor prevents instantaneous voltage changes, so it takes some time for $V_{E}$
+to fall below this trigger threshold. We expect an RC time constant for the discharge to be on
+order of $\tau=R_{E}C_{E}$, but solving for the transient equation may give additional insights.
+\begin{equation*}
+i(t)=C\frac{dv(t)}{dt} \quad \quad \textrm{resists instantaneous } \delta V
+\end{equation*}
+
+\clearpage
+
+The cross-connected bases make the transistors behave somewhat like a constant voltage source.
+If we assume that switching times for the transistors is negligible, then the transient circuit
+is as shown in figure \ref{simple-transient-circuit}. This assumption is true if the base-emitter
+capacitance is negligible, and so is the delay in the BJT due to the rate of minority carrier diffusion.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.5\textwidth]{diagrams/simple-transient-circuit}
+	\caption{Transient Circuit for Simple Emitter-Coupled Oscillator}
+	\label{simple-transient-circuit}
+\end{figure}
 
 \end{document}
