@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.28)  20 MAR 2015 13:28
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.28)  22 MAR 2015 16:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -343,7 +343,7 @@ ut line 71.
 File: diagrams/latch-circuit.png Graphic file (type png)
 
 <use diagrams/latch-circuit.png>
-Package pdftex.def Info: diagrams/latch-circuit.png used on input line 93.
+Package pdftex.def Info: diagrams/latch-circuit.png used on input line 94.
 (pdftex.def)             Requested size: 260.17465pt x 145.10347pt.
  [3
 
@@ -352,7 +352,7 @@ Package pdftex.def Info: diagrams/latch-circuit.png used on input line 93.
 File: diagrams/simple-circuit.png Graphic file (type png)
 
 <use diagrams/simple-circuit.png>
-Package pdftex.def Info: diagrams/simple-circuit.png used on input line 216.
+Package pdftex.def Info: diagrams/simple-circuit.png used on input line 219.
 (pdftex.def)             Requested size: 260.17465pt x 145.88998pt.
 
 
@@ -362,24 +362,71 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.263 ...width]{diagrams/simple-transient-circuit}
+l.267 ...width]{diagrams/simple-transient-circuit}
                                                   
 ? 
 [5
 
- <./diagrams/simple-circuit.png (PNG copy)>] [6] [7] (./report.aux)
+ <./diagrams/simple-circuit.png (PNG copy)>] [6]
+Overfull \hbox (1.26965pt too wide) in paragraph at lines 414--417
+\OT1/cmr/m/n/10 The astable mul-ti-vi-bra-tor cir-cuit can be im-proved by addi
+ng volt-age buffers into the cross-connections
+ []
+
+
+! LaTeX Error: File `diagrams/advanced-circuit' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.420 ...0.6\textwidth]{diagrams/advanced-circuit}
+                                                  
+? 
+[7]
+
+! LaTeX Error: File `diagrams/advanced-circuit-without-mirrors' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.458 ...iagrams/advanced-circuit-without-mirrors}
+                                                  
+? 
+[8]
+
+! LaTeX Error: File `diagrams/advanced-transient-circuit' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.509 ...dth]{diagrams/advanced-transient-circuit}
+                                                  
+? 
+[9]
+
+LaTeX Warning: Reference `specifications-table' on page 10 undefined on input l
+ine 584.
+
+File: diagrams/simple-circuit.png Graphic file (type png)
+<use diagrams/simple-circuit.png>
+Package pdftex.def Info: diagrams/simple-circuit.png used on input line 613.
+(pdftex.def)             Requested size: 260.17465pt x 145.88998pt.
+ [10] [11] (./report.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4352 strings out of 493304
- 64219 string characters out of 6139871
- 143912 words of memory out of 5000000
- 7728 multiletter control sequences out of 15000+600000
+ 4373 strings out of 493304
+ 64633 string characters out of 6139871
+ 144045 words of memory out of 5000000
+ 7746 multiletter control sequences out of 15000+600000
  9023 words of font info for 33 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,9n,38p,789b,275s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,10n,38p,789b,280s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texl
@@ -395,10 +442,10 @@ usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on report.pdf (9 pages, 253105 bytes).
+Output written on report.pdf (13 pages, 272827 bytes).
 PDF statistics:
- 100 PDF objects out of 1000 (max. 8388607)
- 70 compressed objects within 1 object stream
+ 113 PDF objects out of 1000 (max. 8388607)
+ 79 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

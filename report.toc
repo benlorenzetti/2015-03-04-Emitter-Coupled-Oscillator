@@ -3,3 +3,14 @@
 \contentsline {section}{\numberline {3}Theory}{3}
 \contentsline {subsection}{\numberline {3.1}Bistable Latch}{3}
 \contentsline {subsection}{\numberline {3.2}Astable Multivibrator}{5}
+\contentsline {subsection}{\numberline {3.3}Frequency Characteristics, Using MATLAB}{8}
+\contentsline {subsection}{\numberline {3.4}Advanced Circuit}{8}
+\contentsline {section}{\numberline {4}Design and Simulation}{10}
+\contentsline {subsection}{\numberline {4.1}Specifications}{10}
+\contentsline {subsection}{\numberline {4.2}BJT Characterization}{10}
+\contentsline {subsection}{\numberline {4.3}Simple Circuit Design}{10}
+\contentsline {subsection}{\numberline {4.4}Simple Circuit Redesign}{11}
+\contentsline {subsection}{\numberline {4.5}Simple Circuit SPICE Simulation}{11}
+\contentsline {subsection}{\numberline {4.6}Advanced Circuit Design}{11}
+\contentsline {subsection}{\numberline {4.7}Advanced Circuit SPICE Simulation}{11}
+\contentsline {section}{\numberline {5}Results}{11}

@@ -83,6 +83,7 @@ ADVANCED CIRCUIT DIAGRAM
 \section{Theory}
 
 \subsection{Bistable Latch}
+\label{bistable-latch}
 
 A digital latch can be built with two cross-connected BJT amplifiers, shown in figure
 \ref{latch-circuit-diagram}. The amplifiers should be nearly mirror images of one another and the
@@ -140,6 +141,7 @@ Combining equations \ref{i-bias-design-decision} and \ref{i-bias-eq} helps in de
 the bias network.
 \begin{equation}
 R_{1}+R_{2}=\frac{\sqrt{\beta}V_{CC}}{I_{C(sat)}}
+\label{r1r2-eq}
 \end{equation}
 
 The analysis so far has assumed that the saturation current is fixed,
@@ -207,6 +209,7 @@ in the next section we will violate the stability by adding reative coupling to 
 
 \clearpage
 \subsection{Astable Multivibrator}
+\label{astable-multivibrator}
 
 The simple circuit for an astable multivibrator is shown in figure \ref{simple-circuit-diagram}.
 Topologically it is easy to make--just add a capactitor to a BJT latch.
@@ -235,6 +238,7 @@ However, in the interest of not burning up the base-emitter junction, $R_{E}$
 should probably be just short of becoming the saturation current limiter.
 \begin{equation}
 R_{E}=\frac{V_{E(sat)}}{I_{E(sat)}}=\frac{\frac{R_{2}}{R_{1}+R_{2}}V_{CC}-V_{BE(on)}}{I_{C(sat)}}
+\label{re-eq}
 \end{equation}
 
 Equation \ref{stability-conditions} described the stability conditions for the latch.
@@ -399,4 +403,245 @@ There are two stable states per period of the square wave, so the frequency of o
 f=\frac{1}{2T_{stability}}=\frac{1}{2R_{E}C_{E}ln\left(\frac{2V_{E(sat)}-V_{E(trig)}}{V_{E(trig)}}\right)}
 \end{equation}
 
+\begin{equation}
+C_{E}=\frac{1}{2R_{E}f*ln\left(\frac{2V_{E(sat)}-V_{E(trig)}}{V_{E(trig)}})\right)}
+\label{ce-eq}
+\end{equation}
+\subsection{Frequency Characteristics, Using MATLAB}
+
+\subsection{Advanced Circuit}
+
+The astable multivibrator circuit can be improved by adding voltage buffers into
+the cross-connections and by replacing the emitter resistors with current mirrors.
+The improved circuit is shown in figure \ref{advanced-circuit}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.6\textwidth]{diagrams/advanced-circuit}
+	\caption{Advanced Version of Astable Multivibrator}
+	\label{advanced-circuit}
+\end{figure}
+
+The two switching transistors are still labeled $Q_{1}$ and $Q_{2}$.
+Transistors $Q_{3}$ and $Q_{4}$ are emitter-folowers that provided more current
+to the cross connections.
+These voltage buffers are an inprovement because $R_{1}$ and $R_{2}$ can be reduced
+to inprove the charging time of the parasitic base-emitter junction capacities.
+
+Transistors $Q_{5-7}$ are set up as current mirrors to provide constant current
+to both of the switching transistors. This is an inprovment because limiting the
+current with the resistors has unwanted effects on the voltages the cause switching.
+Additionally, in the simple circuit, the emitter resistors had to be large enough
+to handle significant power.
+
+The current from the mirrors
+should be equal to the average transistor current, or half of the
+saturation current because only one switching transistor is on at any moment.
+\begin{equation*}
+I_{mirror}=I_{C(ave)}
+\end{equation*}
+
+For a current mirror, the emitter resistors should be equal and small and
+the current will be set by the saturation current through $R_{REF}$.
+\begin{equation}
+I_{mirror}=\frac{V_{CC}-V_{BE(on)}}{R_{REF}+R_{E7}}
+\quad \textrm{or} \quad
+R_{REF}=\frac{V_{CC}-V_{BE(on)}}{I_{C(ave)}}-R_{E7}
+\label{advanced-rref-eq}
+\end{equation}
+
+After setting up the current mirrors, they can be ignored and replaced
+by constant current sources. See figure \ref{advanced-circuit-without-mirrors}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.6\textwidth]{diagrams/advanced-circuit-without-mirrors}
+	\caption{Advanced Circuit with Equivalent Current Sources}
+	\label{advanced-circuit-without-mirrors}
+\end{figure}
+
+The amplitude of the output swing and the current from the current mirrors are related by $R_{C}$.
+\begin{equation}
+I_{C(sat)}=2*I_{C(ave)}
+\end{equation}
+\begin{equation}
+R_{C}=\frac{V_{pkpk}}{I_{C(sat)}}
+\label{advanced-rc-eq}
+\end{equation}
+
+The inputs for $Q_{1}$ and $Q_{2}$ come from the output state of the opposited transistor,
+after passing through the voltage buffer and a voltage divider.
+\begin{equation*}
+\left\{\begin{array}{lr}
+V_{B(sat)}=\frac{R_{2}}{R_{1}+R_{2}}(V_{CC}-V_{BE(on)})	\\
+V_{B(off)}=\frac{R_{2}}{R_{1}+R_{2}}(V_{CC}-V_{pkpk}-V_{BE(on)})
+\end{array}\right.
+\end{equation*}
+
+The current state of the switching transistors is stable as long as
+the potential at the emitter of the off transistor is withing 0.7 V of
+that transistor's base. The on transistor would remain on indefinitely
+if the off transistor did not abruptly change the base biasings.
+\begin{equation}
+\left\{\begin{array}{lr}
+V_{E(sat)}=\frac{R_{2}}{R_{1}+R_{2}}(V_{CC}-V_{BE(on)})-V_{BE(on)}	\\
+V_{E(off)}>\frac{R_{2}}{R_{1}+R_{2}}(V_{CC}-V_{pkpk}-V_{BE(on)})-V_{BE(on)}
+\end{array}\right.
+\label{advanced-stability-conditions}
+\end{equation}
+
+The top half of the circuit has now been analyzed and equation
+\ref{advanced-stability-conditions} provide the stability conditions for
+which we can treat the top half as a black box. To analyze the transient
+bottom half of the circuit, the top half can be replaced by ideal switches
+connected to the emitter voltage at saturation from first stability condition.
+This simplified circuit will remain valid until the emitter voltage at the off
+switch violates the second stability condition.
+\begin{equation}
+V_{E(trig)}=\textrm{Min}(V_{E(off)})=\frac{R_{2}}{R_{1}+R_{2}}(V_{CC}-V_{pkpk}-V_{BE(on)})-V_{BE(on)}
+\end{equation}
+
+The equivalent circuit for the transient analysis is shown in figure
+\ref{advanced-transient-circuit}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.5\textwidth]{diagrams/advanced-transient-circuit}
+	\caption{Transient Model for the Advanced Astable Multivibrator}
+	\label{advanced-transient-circuit}
+\end{figure}
+
+At the instant before switching occurs, $v_{e1}$ is shorted to $V_{E(sat)}$ and
+$v_{e2}$ is approaching $V_{E(trig)}$. So,
+\begin{equation}
+v_{c}(0^{-})=V_{E(sat)}-V_{E(trig)}
+\label{advanced-initial-condition}
+\end{equation}
+
+The current through the capacitor is fixed by the constant current source
+of the off transistor's side.
+\begin{equation*}
+i_{C}(t)=I_{C(ave)}
+\end{equation*}
+
+Replacing the capacitor current with the capacitor i-v relationship yields
+a first order, separable differential equation.
+\begin{equation*}
+-C_{E}\frac{dv_{E}}{dt}=I_{C(ave)}
+\end{equation*}
+
+Solving gives an equation for voltage across the capacitor.
+\begin{equation*}
+dv_{C}=\frac{-I_{C(ave)}}{C_{E}}dt
+\end{equation*}
+
+\begin{equation*}
+\int 1*dv_{C}=\frac{-I_{C(ave)}}{C_{E}}\int 1*dt
+\end{equation*}
+
+\begin{equation*}
+v_{C}(t)=\frac{-I_{C(ave)}}{C_{E}}t+K
+\end{equation*}
+
+The constant from integration should be the initial voltage across the capacitor.
+Substituting this in from equation \ref{advanced-initial-condition} gives
+\begin{equation}
+v_{C}(t)=\frac{-I_{C(ave)}}{C_{E}}t+V_{E(sat)}-V_{E(trig)}
+\end{equation}
+
+The voltage across the capacitor is directly related to the off emitter voltage.
+We are interested in the period of time for which the off emitter voltage is greater
+than the trigger voltage.
+\begin{equation*}
+v_{E(off)}=V_{E(sat)}+v_{C}(t)
+\end{equation*}
+
+\begin{equation*}
+v_{E(off)}=V_{E(sat)}+\frac{-I_{C(ave)}}{C_{E}}t+V_{E(sat)}-V_{E(trig)}
+\end{equation*}
+
+\begin{equation*}
+V_{E(trig)}=V_{E(sat)}+\frac{-I_{C(ave)}}{C_{E}}T_{stable}+V_{E(sat)}-V_{E(trig)}
+\end{equation*}
+
+\begin{equation}
+T_{stable}=\frac{2C_{E(trig)}(V_{E(sat)}-V_{E(trig)})}{I_{C(ave)}}
+\end{equation}
+
+The period of stability for one transistor is half of the square wave cycle,
+so the frequency of oscillation is defined by
+\begin{equation}
+f=\frac{I_{C(ave)}}{4C_{E}[V_{E(sat)}-V_{E(trig)}]}
+\quad, \quad
+C_{E}=\frac{I_{C(ave)}}{4f[V_{E(sat)}-V_{E(trig)}]}
+\end{equation}
+
+\section{Design and Simulation}
+
+\subsection{Specifications}
+
+For this lab I needed to build a square wave, emitter-coupled oscillator
+that meets the specifications in table \ref{specifications-table}.
+
+\begin{table}[ht]
+\centering
+\caption{Emitter-Coupled Oscillator Design Specifications}
+\begin{tabular}{c c c}
+\hline\hline
+Parameter	&Notation	&Value	\\
+\hline\hline
+Power Supply	&$V_{CC}$	&24 V	\\
+Output Signal Amplitude	&$V_{pkpk}$	&2 V	\\
+Maximum Frequency	&$f$	&50 MHz	\\
+Average $I_{C}$ of Switching Transistor	&$\frac{I_{C(sat)}}{2}$	&6 mA	\\
+\hline\hline
+\end{tabular}
+\label{specs-table}
+\end{table}
+
+\subsection{BJT Characterization}
+
+\subsection{Simple Circuit Design}
+
+An astable multivibrator was designed with the theory derived in sections
+\ref{bistable-latch} and \ref{astable-multivibrator} in order to meet the
+specifications for the lab in table \ref{specs-table}.
+The circuit is shown in figure \ref{simple-circuit-2}
+and the designed component values are shown in table \ref{simple-circuit-design-table}.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=.6\textwidth]{diagrams/simple-circuit}
+	\caption{Simple Circuit Diagram}
+	\label{simple-circuit-2}
+\end{figure}
+
+\begin{table}[ht]
+\centering
+\caption{Simple Circuit Designed with $V_{CC}=24V$, $V_{pkpk}=2.4V$, $I_{C(sat)}=12mA$.}
+\begin{tabular}{c | c | c | c}
+\hline\hline
+Component	&Designed Value	&Measured Value	&Design Method	\\
+\hline\hline
+$R_{C}$	&$200\Omega$	&-	&equation \ref{rc-eq}	\\
+$R_{1}+R_{2}$	&$20k\Omega$	&-	&equation \ref{r1r2-eq}	\\
+$\frac{R_{2}}{R_{1}+R_{2}}$	&0.917	&-	&equation \ref{stability-conditions}	\\
+$R_{2}$	&$18.3k\Omega$	&-	&$R_{2}=\frac{R_{2}}{R_{1}+R_{2}}(R_{1}+R_{2})$	\\
+$R_{1}$	&$1.7k\Omega$	&-	&$R_{1}=(R_{1}+R_{2})-R_{2}$	\\
+$R_{E}$	&$1.7k\Omega$	&-	&equation \ref{re-eq}	\\
+$C_{E(50MHz)}$	&
+\end{tabular}
+\label{simple-circuit-design-table}
+\end{table}
+
+table of designed values, equations, and measured values.
+
+\subsection{Simple Circuit Redesign}
+
+\subsection{Simple Circuit SPICE Simulation}
+
+\subsection{Advanced Circuit Design}
+
+\subsection{Advanced Circuit SPICE Simulation}
+
+\section{Results}
 \end{document}
