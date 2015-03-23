@@ -898,6 +898,111 @@ The simulated frequency is almost exactly 50 MHz.
 
 \section{Results}
 
+\subsection{Simple Circuit}
+
+The simple circuit designed in table \ref{simple-circuit-redesign-table}
+was built on a breadboard according to the circuit diagram from figure
+\ref{simple-circuit-diagram}. Different capacitors were inserted for $C_{E}$
+in order to tune the oscillator to 4 different frequencies: 0.1 MHz, 1 MHz, 10 MHz, and 50 MHz.
+
+A screenshot from the oscilloscope was captured for each of the four frequencies and the final
+capacitors used were measured and recorded in table
+\ref{simple-circuit-redesign-table}. The screenshots are shown in figures \ref{simple-100kHz},
+\ref{simple-1MHz}, \ref{simple-10MHz}, and \ref{simple-50MHz} in order of increasing frequency.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.8\textwidth]{results/simple-100kHz}
+	\caption{Redesigned Simple Circuit Tuned to 0.1 MHz}
+	\label{simple-100kHz}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.8\textwidth]{results/simple-1MHz}
+	\caption{Redesigned Simple Circuit Tuned to 1 MHz}
+	\label{simple-1MHz}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.8\textwidth]{results/simple-10MHz}
+	\caption{Redesigned Simple Circuit Tuned to 10 MHz}
+	\label{simple-10MHz}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.8\textwidth]{results/simple-50MHz}
+	\caption{Redesigned Simple Circuit Tuned to 50 MHz}
+	\label{simple-50MHz}
+\end{figure}
+
+\subsection{Advanced Circuit}
+
+The advanced circuit designed in table \ref{advanced-circuit-design-table}
+was built on a breadboard according to the circuit diagram from figure
+\ref{advanced-circuit}. Different capacitors were inserted for $C_{E}$
+in order to tune the oscillator to 4 different frequencies: 0.1 MHz, 1 MHz, 10 MHz, and 50 MHz.
+
+A screenshot from the oscilloscope was captured for each of the four frequencies and the final
+capacitors used were measured and recorded in table
+\ref{advanced-circuit-design-table}. The screenshots are shown in figures \ref{advanced-100kHz},
+\ref{advanced-1MHz}, \ref{advanced-10MHz}, and \ref{advanced-50MHz} in order of increasing frequency.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.8\textwidth]{results/advanced-100kHz}
+	\caption{Advanced Circuit Tuned to 0.1 MHz}
+	\label{advanced-100kHz}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.8\textwidth]{results/advanced-1MHz}
+	\caption{Advanced Circuit Tuned to 1 MHz}
+	\label{advanced-1MHz}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.8\textwidth]{results/advanced-10MHz}
+	\caption{Advanced Circuit Tuned to 10 MHz}
+	\label{advanced-10MHz}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.8\textwidth]{results/advanced-50MHz}
+	\caption{Advanced Circuit Tuned to 50 MHz}
+	\label{advanced-50MHz}
+\end{figure}
+
+\subsection{Results Summary Table}
+
+The measured frequency and capacitance for all 8 experimental waveforms are
+summarized in table \ref{results-summary-table} and compared to the designed values.
+Also included in the table is the output amplitude and a qualitative description of the waveform.
+
+\begin{table}[ht]
+\centering
+\caption{Results Summary Table}
+\begin{tabular}{c | c | c | c | c | c | c | c}
+\hline\hline
+Circuit	&Design $f$	&Design $C_{E}$	&SPICE $f$	&$f$	&$C_{E}$	&$V_{pkpk}$	&Wave Shape	\\
+\hline\hline
+Simple	&0.1 MHz	&25.2 nF		&-			&		&27.7 nF	&			&	\\
+		&1 MHz		&2.52 nF		&-			&		&1.92 nF	&			&	\\
+		&10 MHz		&252 pF			&-			&		&153.4 pF	&			&	\\
+		&50 MHz		&25.2 pF		&~40 MHz	&		&14.57 pF	&			&	\\
+\hline
+Advanced&0.1 MHz	&21.4 nF		&-			&		&45.87 nF	&			&	\\
+		&1 MHz		&2.14 nF		&-			&		&3.08 nF	&			&	\\
+		&10 MHz		&214 pF			&-			&		&213.1 pF	&			&	\\
+		&50 MHz		&42.9 pF		&~50 MHz	&		&20.57 pF	&			&	\\
+\hline\hline
+\end{tabular}
+\end{table}
 \clearpage
 \section{Appendices}
 \subsection{MATLAB Script for Frequency Function}
