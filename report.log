@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.13)  23 MAR 2015 07:54
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.28)  23 MAR 2015 09:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **report.tex
 (./report.tex
 LaTeX2e <2011/06/27>
-Babel <3.9h> and hyphenation patterns for 2 languages loaded.
+Babel <3.9h> and hyphenation patterns for 78 languages loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
@@ -409,112 +409,120 @@ File: diagrams/simple-circuit.png Graphic file (type png)
 Package pdftex.def Info: diagrams/simple-circuit.png used on input line 643.
 (pdftex.def)             Requested size: 216.81pt x 121.57103pt.
  [11] [12]
-<results/q1-characteristics.png, id=71, 462.528pt x 430.9701pt>
+
+LaTeX Warning: Reference `redesigned-stability-conditions' on page 13 undefined
+ on input line 760.
+
+[13] <results/q1-characteristics.png, id=74, 462.528pt x 430.9701pt>
 File: results/q1-characteristics.png Graphic file (type png)
 
 <use results/q1-characteristics.png>
-Package pdftex.def Info: results/q1-characteristics.png used on input line 712.
+Package pdftex.def Info: results/q1-characteristics.png used on input line 796.
 
 (pdftex.def)             Requested size: 260.17465pt x 242.43323pt.
 
-<results/q2-characteristics.png, id=72, 455.59398pt x 431.67987pt>
+<results/q2-characteristics.png, id=75, 455.59398pt x 431.67987pt>
 File: results/q2-characteristics.png Graphic file (type png)
 
 <use results/q2-characteristics.png>
-Package pdftex.def Info: results/q2-characteristics.png used on input line 718.
+Package pdftex.def Info: results/q2-characteristics.png used on input line 802.
 
 (pdftex.def)             Requested size: 260.17465pt x 246.53433pt.
 
-<results/q3-characteristics.png, id=73, 456.90161pt x 431.20294pt>
+<results/q3-characteristics.png, id=76, 456.90161pt x 431.20294pt>
 File: results/q3-characteristics.png Graphic file (type png)
 
 <use results/q3-characteristics.png>
-Package pdftex.def Info: results/q3-characteristics.png used on input line 724.
+Package pdftex.def Info: results/q3-characteristics.png used on input line 808.
 
 (pdftex.def)             Requested size: 260.17465pt x 245.55136pt.
 
-<results/q4-characteristics.png, id=74, 457.71pt x 431.9337pt>
+<results/q4-characteristics.png, id=77, 457.71pt x 431.9337pt>
 File: results/q4-characteristics.png Graphic file (type png)
 
 <use results/q4-characteristics.png>
-Package pdftex.def Info: results/q4-characteristics.png used on input line 730.
+Package pdftex.def Info: results/q4-characteristics.png used on input line 814.
 
 (pdftex.def)             Requested size: 260.17465pt x 245.5325pt.
 
-<results/q5-characteristics.png, id=75, 455.61522pt x 433.8609pt>
+<results/q5-characteristics.png, id=78, 455.61522pt x 433.8609pt>
 File: results/q5-characteristics.png Graphic file (type png)
 
 <use results/q5-characteristics.png>
-Package pdftex.def Info: results/q5-characteristics.png used on input line 736.
+Package pdftex.def Info: results/q5-characteristics.png used on input line 820.
 
 (pdftex.def)             Requested size: 260.17465pt x 247.76007pt.
 
-<results/q6-characteristics.png, id=76, 455.3735pt x 429.2693pt>
+<results/q6-characteristics.png, id=79, 455.3735pt x 429.2693pt>
 File: results/q6-characteristics.png Graphic file (type png)
 
 <use results/q6-characteristics.png>
-Package pdftex.def Info: results/q6-characteristics.png used on input line 742.
+Package pdftex.def Info: results/q6-characteristics.png used on input line 826.
 
 (pdftex.def)             Requested size: 260.17465pt x 245.27554pt.
 
-<results/q7-characteristics.png, id=77, 456.15845pt x 431.43pt>
+<results/q7-characteristics.png, id=80, 456.15845pt x 431.43pt>
 File: results/q7-characteristics.png Graphic file (type png)
 
 <use results/q7-characteristics.png>
-Package pdftex.def Info: results/q7-characteristics.png used on input line 748.
+Package pdftex.def Info: results/q7-characteristics.png used on input line 832.
 
 (pdftex.def)             Requested size: 260.17465pt x 246.06905pt.
 
-<results/q8-characteristics.png, id=78, 458.2797pt x 428.51pt>
+<results/q8-characteristics.png, id=81, 458.2797pt x 428.51pt>
 File: results/q8-characteristics.png Graphic file (type png)
 
 <use results/q8-characteristics.png>
-Package pdftex.def Info: results/q8-characteristics.png used on input line 754.
+Package pdftex.def Info: results/q8-characteristics.png used on input line 838.
 
 (pdftex.def)             Requested size: 260.17465pt x 243.28552pt.
 
-<results/q9-characteristics.png, id=79, 457.54723pt x 431.67987pt>
+<results/q9-characteristics.png, id=82, 457.54723pt x 431.67987pt>
 File: results/q9-characteristics.png Graphic file (type png)
 
 <use results/q9-characteristics.png>
-Package pdftex.def Info: results/q9-characteristics.png used on input line 760.
+Package pdftex.def Info: results/q9-characteristics.png used on input line 844.
 
 (pdftex.def)             Requested size: 260.17465pt x 245.46725pt.
- [13
+ [14
 
  <./results/q1-characteristics.png>]
-[14 <./results/q2-characteristics.png> <./results/q3-characteristics.png>]
-[15 <./results/q4-characteristics.png> <./results/q5-characteristics.png>]
-[16 <./results/q6-characteristics.png> <./results/q7-characteristics.png>]
-[17 <./results/q8-characteristics.png> <./results/q9-characteristics.png>]
-(./report.aux) ) 
+[15 <./results/q2-characteristics.png> <./results/q3-characteristics.png>]
+[16 <./results/q4-characteristics.png> <./results/q5-characteristics.png>]
+[17 <./results/q6-characteristics.png> <./results/q7-characteristics.png>]
+[18 <./results/q8-characteristics.png> <./results/q9-characteristics.png>]
+(./report.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 4437 strings out of 495028
- 67079 string characters out of 6181497
- 144813 words of memory out of 5000000
- 7561 multiletter control sequences out of 15000+600000
+ 4445 strings out of 493304
+ 67269 string characters out of 6139871
+ 149168 words of memory out of 5000000
+ 7818 multiletter control sequences out of 15000+600000
  9023 words of font info for 33 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
+ 957 hyphenation exceptions out of 8191
  38i,10n,38p,789b,286s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on report.pdf (19 pages, 691733 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on report.pdf (20 pages, 695295 bytes).
 PDF statistics:
- 147 PDF objects out of 1000 (max. 8388607)
- 92 compressed objects within 1 object stream
+ 150 PDF objects out of 1000 (max. 8388607)
+ 94 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  86 words of extra memory for PDF output out of 10000 (max. 10000000)
 

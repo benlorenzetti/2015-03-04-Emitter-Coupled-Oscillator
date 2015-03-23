@@ -690,8 +690,92 @@ shows this is on the order of 10 ns.
 \tau=R_{1}C_{JE}=8.9ns\quad\quad f=111MHz
 \end{equation*}
 
+This is definitely in the range that could interfere with 50 MHz oscillation.
+In order to inprove the oscillator for higher frequencies, the circuit needed to be redesigned.
 
 \subsection{Simple Circuit Redesign}
+
+The parasitic capacitance of the switching transistors cannot be changed. However,
+the corresponding RC time constant can be reduced by reducing $R_{1}$. Unfortunately,
+this will violate my biasing assumption that the current through the cross-connections
+be negligible relative to the saturation current.
+
+The new design decision will be this: the current through the cross-connection networks
+will be equal to the saturation current through the transistor. Several equations change
+to accomodate this new design. Equation \ref{rc-eq} changes to
+\begin{equation}
+R_{C}=\frac{2V_{pkpk}}{I_{C(sat)}}
+\label{redesigned-rc-eq}
+\end{equation}
+
+equation \ref{r1r2-eq} changes to
+\begin{equation}
+R_{1}+R_{2}=\frac{V_{CC}}{I_{C(sat)}}
+\label{redesigned-r1r2-eq}
+\end{equation}
+
+equation \ref{stability-conditions} changes to
+\begin{equation}
+\left\{
+\begin{array}{lr}
+\frac{R_{2}}{R_{1}+R_{2}}=\frac{V_{CC}-2V_{pkpk}}{V_{CC}-V_{pkpk}}	& : \textrm{saturation}	\\
+V_{E(off)}>\frac{R_{2}}{R_{1}+R_{2}}(V_{CC}-2V_{pkpk})-V_{BE(on)}	& : \textrm{cutoff}
+\end{array}
+\right.
+\label{redesigned-stability-eq}
+\end{equation}
+
+equation \ref{ve-sat-eq} changes to
+\begin{equation}
+V_{E(sat)}=\frac{R_{2}}{R_{1}+R_{2}}(V_{CC}-V_{pkpk})-V_{BE(on)}
+\label{redesigned-ve-sat-eq}
+\end{equation}
+
+equation \ref{ve-trig-eq} changes to
+\begin{equation}
+V_{E(trig)}=\frac{R_{2}}{R_{1}+R_{2}}(V_{CC}-2V_{pkpk})-V_{BE(on)}
+\label{redesigned-ve-trig-eq}
+\end{equation}
+
+and equation \ref{re-eq} changes to
+\begin{equation}
+R_{E}=\frac{\frac{R_{2}}{R_{1}+R_{2}}(V_{CC}-V_{pkpk})-V_{BE(on)}}{I_{C(sat)}}
+\label{redesigned-re-eq}
+\end{equation}
+
+The simple circuit was redesigned with these new criteria, and this is listed
+in table \ref{simple-circuit-redesign-table}.
+
+\begin{table}[ht]
+\centering
+\caption{Simple Circuit Redesign}
+\begin{tabular}{c | c | c}
+\hline\hline
+Parameter	&Designed Value	&Design Method	\\
+\hline\hline
+$V_{CC}$	&24 V	&specified	\\
+$V_{pkpk}$	&2.4 V	&specified $+20\%$	\\
+$I_{C(sat)}$	&12 mA	&$2*I_{C(ave)}$	\\
+$R_{1}+R_{2}$	&$2k\Omega$	&equation \ref{redesigned-r1r2-eq}	\\
+$\frac{R_{2}}{R_{1}+R_{2}}$	&0.909	&equation \ref{redesigned-stability-conditions}	\\
+$V_{E(sat)}$	&19.30 V	&equation \ref{redesigned-ve-sat-eq}	\\
+$V_{E(trig)}$	&18.11 V	&equation \ref{redesigned-ve-trig-eq}	\\
+\hline
+Component	&Designed Value	&Design Method	\\
+\hline
+$R_{C}$	&$400\Omega$	&equation \ref{redesigned-rc-eq}	\\
+$R_{2}$	&$1818\Omega$	&$R_{2}=\frac{R_{2}}{R_{1}+R_{2}}(R_{1}+R_{2})$	\\
+$R_{1}$	&$182\Omega$	&$R_{1}=(R_{1}+R_{2})-R_{2}$	\\
+$R_{E}$	&$1608\Omega$	&equation \ref{re-eq}	\\
+$C_{E(0.1MHz)}$	&25,200 pF	&equation \ref{ce-eq}	\\
+$C_{E(1MHz)}$	&2,5200 pF	&equation \ref{ce-eq}	\\
+$C_{E(10MHz)}$	&252 pF	&equation \ref{ce-eq}	\\
+$C_{E(50MHz)}$	&25 pF	&equation \ref{ce-eq}	\\
+\hline\hline
+\end{tabular}
+\label{simple-circuit-redesign-table}
+\end{table}
+
 
 \subsection{Simple Circuit SPICE Simulation}
 

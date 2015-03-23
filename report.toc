@@ -10,9 +10,9 @@
 \contentsline {subsection}{\numberline {4.2}BJT Characterization}{11}
 \contentsline {subsection}{\numberline {4.3}Simple Circuit Design}{11}
 \contentsline {subsection}{\numberline {4.4}Simple Circuit Redesign}{12}
-\contentsline {subsection}{\numberline {4.5}Simple Circuit SPICE Simulation}{12}
-\contentsline {subsection}{\numberline {4.6}Advanced Circuit Design}{12}
-\contentsline {subsection}{\numberline {4.7}Advanced Circuit SPICE Simulation}{12}
-\contentsline {section}{\numberline {5}Results}{12}
-\contentsline {section}{\numberline {6}Appendices}{12}
-\contentsline {subsection}{\numberline {6.1}BJT Characterization Curves}{13}
+\contentsline {subsection}{\numberline {4.5}Simple Circuit SPICE Simulation}{13}
+\contentsline {subsection}{\numberline {4.6}Advanced Circuit Design}{13}
+\contentsline {subsection}{\numberline {4.7}Advanced Circuit SPICE Simulation}{13}
+\contentsline {section}{\numberline {5}Results}{13}
+\contentsline {section}{\numberline {6}Appendices}{13}
+\contentsline {subsection}{\numberline {6.1}BJT Characterization Curves}{14}
