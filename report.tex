@@ -6,6 +6,7 @@
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{nicefrac}
+\usepackage{verbatim}
 \usepackage{tablefootnote}
 \begin{document}
 
@@ -404,13 +405,42 @@ T_{stability}=R_{E}C_{E}ln\left(\frac{2V_{E(sat)}-V_{E(trig)}}{V_{E(trig)}}\righ
 There are two stable states per period of the square wave, so the frequency of oscillation is
 \begin{equation}
 f=\frac{1}{2T_{stability}}=\frac{1}{2R_{E}C_{E}ln\left(\frac{2V_{E(sat)}-V_{E(trig)}}{V_{E(trig)}}\right)}
+\label{f-eq}
 \end{equation}
 
 \begin{equation}
 C_{E}=\frac{1}{2R_{E}f*ln\left(\frac{2V_{E(sat)}-V_{E(trig)}}{V_{E(trig)}})\right)}
 \label{ce-eq}
 \end{equation}
+
 \subsection{Frequency Characteristics, Using MATLAB}
+
+To better visualized the effects of design parameters on the frequency of oscillation,
+equation \ref{f-eq} was plotted in MATLAB as a function of several parameters. The
+results are shown in plots \ref{vary-icsat}, \ref{vary-vcc}, and \ref{vary-vpkpk}.
+The generic MATLAB script that was used to generate these plots is include in appendix
+\ref{matlab-plotting-script}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.85\textwidth]{matlab/vary-ce-with-multiple-icsats}
+	\caption{Effects of Varying $C_{E}$ and $I_{C(sat)}$ on Frequency of Oscillation}
+	\label{vary-icsat}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.6\textwidth]{matlab/vary-vcc}
+	\caption{Effect of $V_{CC}$ Design on Frequency of Oscillation}
+	\label{vary-vcc}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.6\textwidth]{matlab/vary-vpkpk}
+	\caption{Effect of $V_{pkpk}$ Design on Frequency of Oscillation}
+	\label{vary-vpkpk}
+\end{figure}
 
 \subsection{Advanced Circuit}
 
@@ -665,10 +695,10 @@ $V_{E(trig)}$	&19.47 V	&equation \ref{ve-trig-eq}	\\
 \hline
 Component	&Designed Value	&Design Method	\\
 \hline
-$R_{C}$	&$200\Omega$	&equation \ref{rc-eq}	\\
-$R_{2}$	&$18.3k\Omega$	&$R_{2}=\frac{R_{2}}{R_{1}+R_{2}}(R_{1}+R_{2})$	\\
-$R_{1}$	&$1.7k\Omega$	&$R_{1}=(R_{1}+R_{2})-R_{2}$	\\
-$R_{E}$	&$1.7k\Omega$	&equation \ref{re-eq}	\\
+$R_{C1}$, $R_{C2}$	&$200\Omega$	&equation \ref{rc-eq}	\\
+$R_{2}$, $R_{4}$	&$18.3k\Omega$	&$R_{2}=\frac{R_{2}}{R_{1}+R_{2}}(R_{1}+R_{2})$	\\
+$R_{1}$, $R_{3}$	&$1.7k\Omega$	&$R_{1}=(R_{1}+R_{2})-R_{2}$	\\
+$R_{E1}$, $R_{E2}$	&$1.7k\Omega$	&equation \ref{re-eq}	\\
 $C_{E(0.1MHz)}$	&17,000 pF	&equation \ref{ce-eq}	\\
 $C_{E(1MHz)}$	&1,700 pF	&equation \ref{ce-eq}	\\
 $C_{E(10MHz)}$	&170 pF	&equation \ref{ce-eq}	\\
@@ -702,13 +732,7 @@ be negligible relative to the saturation current.
 
 The new design decision will be this: the current through the cross-connection networks
 will be equal to the saturation current through the transistor. Several equations change
-to accomodate this new design. Equation \ref{rc-eq} changes to
-\begin{equation}
-R_{C}=\frac{2V_{pkpk}}{I_{C(sat)}}
-\label{redesigned-rc-eq}
-\end{equation}
-
-equation \ref{r1r2-eq} changes to
+to accomodate this new design. Equation \ref{r1r2-eq}
 \begin{equation}
 R_{1}+R_{2}=\frac{V_{CC}}{I_{C(sat)}}
 \label{redesigned-r1r2-eq}
@@ -744,33 +768,37 @@ R_{E}=\frac{\frac{R_{2}}{R_{1}+R_{2}}(V_{CC}-V_{pkpk})-V_{BE(on)}}{I_{C(sat)}}
 \end{equation}
 
 The simple circuit was redesigned with these new criteria, and this is listed
-in table \ref{simple-circuit-redesign-table}.
+in table \ref{simple-circuit-redesign-table}. In addition to redesigning the
+current ratio through the cross-connection, I also doubled the saturation current
+from my original specification to further increase the frequency of oscillation.
+The idea for doing this came from the theoretical frequency and the MATLAB plot
+in figure \ref{vary-icsat}.
 
 \begin{table}[ht]
 \centering
 \caption{Simple Circuit Redesign}
-\begin{tabular}{c | c | c}
+\begin{tabular}{c | c | c | c}
 \hline\hline
-Parameter	&Designed Value	&Design Method	\\
+Parameter	&Designed Value	&Design Method	&Adjusted Value\\
 \hline\hline
-$V_{CC}$	&24 V	&specified	\\
-$V_{pkpk}$	&2.4 V	&specified $+20\%$	\\
-$I_{C(sat)}$	&12 mA	&$2*I_{C(ave)}$	\\
-$R_{1}+R_{2}$	&$2k\Omega$	&equation \ref{redesigned-r1r2-eq}	\\
-$\frac{R_{2}}{R_{1}+R_{2}}$	&0.909	&equation \ref{redesigned-stability-conditions}	\\
-$V_{E(sat)}$	&19.30 V	&equation \ref{redesigned-ve-sat-eq}	\\
-$V_{E(trig)}$	&18.11 V	&equation \ref{redesigned-ve-trig-eq}	\\
+$V_{CC}$	&24 V	&specified	&-\\
+$V_{pkpk}$	&2.4 V	&specified $+20\%$	&-\\
+$I_{C(sat)}$	&12 mA	&$2*I_{C(ave)}$	&$[24mA]$\tablefootnote{doubled the specified current to improve frequency, see plot \ref{vary-icsat}}\\
+$R_{1}+R_{2}$	&$1k\Omega$	&equation \ref{redesigned-r1r2-eq}	&$[2k\Omega]$\tablefootnote{had to increase $R_{1}+R_{2}$ in order to reduce power to $\frac{1}{4}$ Watt for available resistors.}\\
+$\frac{R_{2}}{R_{1}+R_{2}}$	&0.909	&equation \ref{redesigned-stability-eq}	&-\\
+$V_{E(sat)}$	&19.30 V	&equation \ref{redesigned-ve-sat-eq}	&-\\
+$V_{E(trig)}$	&18.11 V	&equation \ref{redesigned-ve-trig-eq}	&-\\
 \hline
-Component	&Designed Value	&Design Method	\\
+Component	&Designed Value	&Design Method	&Measured Value	\\
 \hline
-$R_{C}$	&$400\Omega$	&equation \ref{redesigned-rc-eq}	\\
-$R_{2}$	&$1818\Omega$	&$R_{2}=\frac{R_{2}}{R_{1}+R_{2}}(R_{1}+R_{2})$	\\
-$R_{1}$	&$182\Omega$	&$R_{1}=(R_{1}+R_{2})-R_{2}$	\\
-$R_{E}$	&$1608\Omega$	&equation \ref{re-eq}	\\
-$C_{E(0.1MHz)}$	&25,200 pF	&equation \ref{ce-eq}	\\
-$C_{E(1MHz)}$	&2,5200 pF	&equation \ref{ce-eq}	\\
-$C_{E(10MHz)}$	&252 pF	&equation \ref{ce-eq}	\\
-$C_{E(50MHz)}$	&25 pF	&equation \ref{ce-eq}	\\
+$R_{C1}$, $R_{C2}$	&$200\Omega$	&equation \ref{rc-eq}	&$98.6\Omega$, $98.2\Omega$	\\
+$R_{2}$, $R_{4}$	&$1818\Omega$	&$R_{2}=\frac{R_{2}}{R_{1}+R_{2}}(R_{1}+R_{2})$	&$1791\Omega$, $1796\Omega$	\\
+$R_{1}$, $R_{3}$	&$182\Omega$	&$R_{1}=(R_{1}+R_{2})-R_{2}$	&$147.8\Omega$, $146.5\Omega$	\\
+$R_{E1}$, $R_{E2}$	&$1608\Omega$	&equation \ref{re-eq}	&$899\Omega$, $899\Omega$	\\
+$C_{E(0.1MHz)}$	&25,200 pF	&equation \ref{ce-eq}	&25,710 pF	\\
+$C_{E(1MHz)}$	&2,5200 pF	&equation \ref{ce-eq}	&1,922 pF	\\
+$C_{E(10MHz)}$	&252 pF	&equation \ref{ce-eq}	&153.4 pF	\\
+$C_{E(50MHz)}$	&25 pF	&equation \ref{ce-eq}	&14.57 pF	\\
 \hline\hline
 \end{tabular}
 \label{simple-circuit-redesign-table}
@@ -785,7 +813,11 @@ $C_{E(50MHz)}$	&25 pF	&equation \ref{ce-eq}	\\
 
 \section{Results}
 
+\clearpage
 \section{Appendices}
+\subsection{MATLAB Script for Frequency Function}
+\label{matlab-plotting-script}
+\verbatiminput{matlab/matlab-script.txt}
 
 \clearpage
 \subsection{BJT Characterization Curves}

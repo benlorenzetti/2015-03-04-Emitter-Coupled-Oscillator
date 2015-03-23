@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.28)  23 MAR 2015 09:54
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.28)  23 MAR 2015 13:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -174,6 +174,12 @@ Package: nicefrac 1998/08/04 v0.9b Nice fractions
 (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 ))
+(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks21
+\verbatim@line=\toks22
+\verbatim@in@stream=\read1
+)
 (/usr/share/texlive/texmf-dist/tex/latex/tablefootnote/tablefootnote.sty
 Package: tablefootnote 2014/01/26 v1.1c Table foot notes (HMM)
 
@@ -214,18 +220,18 @@ LaTeX Warning: Unused global option(s):
 (./report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -268,12 +274,12 @@ LaTeX Font Info:    ... okay on input line 10.
 \scratchbox=\box28
 \nofMPsegments=\count112
 \nofMParguments=\count113
-\everyMPshowfont=\toks21
+\everyMPshowfont=\toks23
 \MPscratchCnt=\count114
 \MPscratchDim=\dimen132
 \MPnumerator=\count115
 \makeMPintoPDFobject=\count116
-\everyMPtoPDFconversion=\toks22
+\everyMPtoPDFconversion=\toks24
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -336,7 +342,7 @@ Package caption Info: End \AtBeginDocument code.
 File: diagrams/latches.png Graphic file (type png)
 
 <use diagrams/latches.png>
-Package pdftex.def Info: diagrams/latches.png used on input line 54.
+Package pdftex.def Info: diagrams/latches.png used on input line 55.
 (pdftex.def)             Requested size: 260.17465pt x 112.51509pt.
 
 <diagrams/block-level-oscillators.png, id=18, 500.08907pt x 149.5989pt>
@@ -344,7 +350,7 @@ File: diagrams/block-level-oscillators.png Graphic file (type png)
 
 <use diagrams/block-level-oscillators.png>
 Package pdftex.def Info: diagrams/block-level-oscillators.png used on input lin
-e 78.
+e 79.
 (pdftex.def)             Requested size: 303.53267pt x 90.8032pt.
  [2
 
@@ -353,7 +359,7 @@ e 78.
 File: diagrams/latch-circuit.png Graphic file (type png)
 
 <use diagrams/latch-circuit.png>
-Package pdftex.def Info: diagrams/latch-circuit.png used on input line 95.
+Package pdftex.def Info: diagrams/latch-circuit.png used on input line 96.
 (pdftex.def)             Requested size: 260.17465pt x 145.10347pt.
  [3
 
@@ -362,7 +368,7 @@ Package pdftex.def Info: diagrams/latch-circuit.png used on input line 95.
 File: diagrams/simple-circuit.png Graphic file (type png)
 
 <use diagrams/simple-circuit.png>
-Package pdftex.def Info: diagrams/simple-circuit.png used on input line 220.
+Package pdftex.def Info: diagrams/simple-circuit.png used on input line 221.
 (pdftex.def)             Requested size: 260.17465pt x 145.88998pt.
 
 <diagrams/simple-transient-circuit.png, id=40, 249.0906pt x 142.6128pt>
@@ -370,159 +376,182 @@ File: diagrams/simple-transient-circuit.png Graphic file (type png)
 
 <use diagrams/simple-transient-circuit.png>
 Package pdftex.def Info: diagrams/simple-transient-circuit.png used on input li
-ne 269.
+ne 270.
 (pdftex.def)             Requested size: 195.12767pt x 111.7206pt.
  [5
 
  <./diagrams/simple-circuit.png (PNG copy)>] [6 <./diagrams/simple-transient-ci
 rcuit.png (PNG copy)>]
-Overfull \hbox (1.26965pt too wide) in paragraph at lines 417--420
+<matlab/vary-ce-with-multiple-icsats.png, id=48, 480.29437pt x 370.38374pt>
+File: matlab/vary-ce-with-multiple-icsats.png Graphic file (type png)
+
+<use matlab/vary-ce-with-multiple-icsats.png>
+Package pdftex.def Info: matlab/vary-ce-with-multiple-icsats.png used on input 
+line 426.
+(pdftex.def)             Requested size: 368.57965pt x 284.23558pt.
+
+<matlab/vary-vcc.png, id=50, 415.5525pt x 310.91156pt>
+File: matlab/vary-vcc.png Graphic file (type png)
+
+<use matlab/vary-vcc.png>
+Package pdftex.def Info: matlab/vary-vcc.png used on input line 433.
+(pdftex.def)             Requested size: 260.17465pt x 194.66556pt.
+
+<matlab/vary-vpkpk.png, id=51, 415.5525pt x 312.41719pt>
+File: matlab/vary-vpkpk.png Graphic file (type png)
+
+<use matlab/vary-vpkpk.png>
+Package pdftex.def Info: matlab/vary-vpkpk.png used on input line 440.
+(pdftex.def)             Requested size: 260.17465pt x 195.60825pt.
+
+Overfull \hbox (1.26965pt too wide) in paragraph at lines 447--450
 \OT1/cmr/m/n/10 The astable mul-ti-vi-bra-tor cir-cuit can be im-proved by addi
 ng volt-age buffers into the cross-connections
  []
 
-[7] <diagrams/advanced-circuit.png, id=52, 490.4724pt x 283.2984pt>
+[7] <diagrams/advanced-circuit.png, id=56, 490.4724pt x 283.2984pt>
 File: diagrams/advanced-circuit.png Graphic file (type png)
 
 <use diagrams/advanced-circuit.png>
-Package pdftex.def Info: diagrams/advanced-circuit.png used on input line 423.
+Package pdftex.def Info: diagrams/advanced-circuit.png used on input line 453.
 (pdftex.def)             Requested size: 346.89732pt x 200.36948pt.
-
-<diagrams/advanced-circuit-without-mirrors.png, id=53, 434.5836pt x 227.8914pt>
+ [8 <./matlab/vary-ce-with-multiple-icsats.png>]
+<diagrams/advanced-circuit-without-mirrors.png, id=61, 434.5836pt x 227.8914pt>
 File: diagrams/advanced-circuit-without-mirrors.png Graphic file (type png)
 <use diagrams/advanced-circuit-without-mirrors.png>
 Package pdftex.def Info: diagrams/advanced-circuit-without-mirrors.png used on 
-input line 461.
+input line 491.
 (pdftex.def)             Requested size: 346.89732pt x 181.91695pt.
- [8 <./diagrams/advanced-circuit.png (PNG copy)>]
-<diagrams/advanced-transient-circuit.png, id=57, 233.1912pt x 152.2488pt>
+
+<diagrams/advanced-transient-circuit.png, id=62, 233.1912pt x 152.2488pt>
 File: diagrams/advanced-transient-circuit.png Graphic file (type png)
 
 <use diagrams/advanced-transient-circuit.png>
 Package pdftex.def Info: diagrams/advanced-transient-circuit.png used on input 
-line 512.
+line 542.
 (pdftex.def)             Requested size: 195.12767pt x 127.39792pt.
- [9 <./diagrams/advanced-circuit-without-mirrors.png (PNG copy)>] [10 <./diagra
-ms/advanced-transient-circuit.png (PNG copy)>]
+ [9 <./matlab/vary-vcc.png>]
+[10 <./matlab/vary-vpkpk.png>] [11 <./diagrams/advanced-circuit.png (PNG copy)>
+]
 File: diagrams/simple-circuit.png Graphic file (type png)
  <use diagrams/simple-circuit.png>
-Package pdftex.def Info: diagrams/simple-circuit.png used on input line 643.
+Package pdftex.def Info: diagrams/simple-circuit.png used on input line 673.
 (pdftex.def)             Requested size: 216.81pt x 121.57103pt.
- [11] [12]
+ [12 <./diagrams/advanced-circuit-without-mirrors.png (PNG copy)> <./diagrams/a
+dvanced-transient-circuit.png (PNG copy)>]
+[13] [14] [15]
+File: matlab/matlab-script.txt  (verbatim)
+ [16
 
-LaTeX Warning: Reference `redesigned-stability-conditions' on page 13 undefined
- on input line 760.
-
-[13] <results/q1-characteristics.png, id=74, 462.528pt x 430.9701pt>
+]
+<results/q1-characteristics.png, id=92, 462.528pt x 430.9701pt>
 File: results/q1-characteristics.png Graphic file (type png)
 
 <use results/q1-characteristics.png>
-Package pdftex.def Info: results/q1-characteristics.png used on input line 796.
+Package pdftex.def Info: results/q1-characteristics.png used on input line 828.
 
 (pdftex.def)             Requested size: 260.17465pt x 242.43323pt.
 
-<results/q2-characteristics.png, id=75, 455.59398pt x 431.67987pt>
+<results/q2-characteristics.png, id=93, 455.59398pt x 431.67987pt>
 File: results/q2-characteristics.png Graphic file (type png)
 
 <use results/q2-characteristics.png>
-Package pdftex.def Info: results/q2-characteristics.png used on input line 802.
+Package pdftex.def Info: results/q2-characteristics.png used on input line 834.
 
 (pdftex.def)             Requested size: 260.17465pt x 246.53433pt.
 
-<results/q3-characteristics.png, id=76, 456.90161pt x 431.20294pt>
+<results/q3-characteristics.png, id=94, 456.90161pt x 431.20294pt>
 File: results/q3-characteristics.png Graphic file (type png)
 
 <use results/q3-characteristics.png>
-Package pdftex.def Info: results/q3-characteristics.png used on input line 808.
+Package pdftex.def Info: results/q3-characteristics.png used on input line 840.
 
 (pdftex.def)             Requested size: 260.17465pt x 245.55136pt.
 
-<results/q4-characteristics.png, id=77, 457.71pt x 431.9337pt>
+<results/q4-characteristics.png, id=95, 457.71pt x 431.9337pt>
 File: results/q4-characteristics.png Graphic file (type png)
 
 <use results/q4-characteristics.png>
-Package pdftex.def Info: results/q4-characteristics.png used on input line 814.
+Package pdftex.def Info: results/q4-characteristics.png used on input line 846.
 
 (pdftex.def)             Requested size: 260.17465pt x 245.5325pt.
 
-<results/q5-characteristics.png, id=78, 455.61522pt x 433.8609pt>
+<results/q5-characteristics.png, id=96, 455.61522pt x 433.8609pt>
 File: results/q5-characteristics.png Graphic file (type png)
 
 <use results/q5-characteristics.png>
-Package pdftex.def Info: results/q5-characteristics.png used on input line 820.
+Package pdftex.def Info: results/q5-characteristics.png used on input line 852.
 
 (pdftex.def)             Requested size: 260.17465pt x 247.76007pt.
 
-<results/q6-characteristics.png, id=79, 455.3735pt x 429.2693pt>
+<results/q6-characteristics.png, id=97, 455.3735pt x 429.2693pt>
 File: results/q6-characteristics.png Graphic file (type png)
 
 <use results/q6-characteristics.png>
-Package pdftex.def Info: results/q6-characteristics.png used on input line 826.
+Package pdftex.def Info: results/q6-characteristics.png used on input line 858.
 
 (pdftex.def)             Requested size: 260.17465pt x 245.27554pt.
 
-<results/q7-characteristics.png, id=80, 456.15845pt x 431.43pt>
+<results/q7-characteristics.png, id=98, 456.15845pt x 431.43pt>
 File: results/q7-characteristics.png Graphic file (type png)
 
 <use results/q7-characteristics.png>
-Package pdftex.def Info: results/q7-characteristics.png used on input line 832.
+Package pdftex.def Info: results/q7-characteristics.png used on input line 864.
 
 (pdftex.def)             Requested size: 260.17465pt x 246.06905pt.
 
-<results/q8-characteristics.png, id=81, 458.2797pt x 428.51pt>
+<results/q8-characteristics.png, id=99, 458.2797pt x 428.51pt>
 File: results/q8-characteristics.png Graphic file (type png)
 
 <use results/q8-characteristics.png>
-Package pdftex.def Info: results/q8-characteristics.png used on input line 838.
+Package pdftex.def Info: results/q8-characteristics.png used on input line 870.
 
 (pdftex.def)             Requested size: 260.17465pt x 243.28552pt.
 
-<results/q9-characteristics.png, id=82, 457.54723pt x 431.67987pt>
+<results/q9-characteristics.png, id=100, 457.54723pt x 431.67987pt>
 File: results/q9-characteristics.png Graphic file (type png)
 
 <use results/q9-characteristics.png>
-Package pdftex.def Info: results/q9-characteristics.png used on input line 844.
+Package pdftex.def Info: results/q9-characteristics.png used on input line 876.
 
 (pdftex.def)             Requested size: 260.17465pt x 245.46725pt.
- [14
+ [17
 
  <./results/q1-characteristics.png>]
-[15 <./results/q2-characteristics.png> <./results/q3-characteristics.png>]
-[16 <./results/q4-characteristics.png> <./results/q5-characteristics.png>]
-[17 <./results/q6-characteristics.png> <./results/q7-characteristics.png>]
-[18 <./results/q8-characteristics.png> <./results/q9-characteristics.png>]
-(./report.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+[18 <./results/q2-characteristics.png> <./results/q3-characteristics.png>]
+[19 <./results/q4-characteristics.png> <./results/q5-characteristics.png>]
+[20 <./results/q6-characteristics.png> <./results/q7-characteristics.png>]
+[21 <./results/q8-characteristics.png> <./results/q9-characteristics.png>]
+(./report.aux) ) 
 Here is how much of TeX's memory you used:
- 4445 strings out of 493304
- 67269 string characters out of 6139871
- 149168 words of memory out of 5000000
- 7818 multiletter control sequences out of 15000+600000
- 9023 words of font info for 33 fonts, out of 8000000 for 9000
+ 4495 strings out of 493304
+ 68257 string characters out of 6139871
+ 149797 words of memory out of 5000000
+ 7859 multiletter control sequences out of 15000+600000
+ 9191 words of font info for 34 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,10n,38p,789b,286s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on report.pdf (20 pages, 695295 bytes).
+ 38i,13n,38p,789b,287s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on report.pdf (23 pages, 763591 bytes).
 PDF statistics:
- 150 PDF objects out of 1000 (max. 8388607)
- 94 compressed objects within 1 object stream
+ 175 PDF objects out of 1000 (max. 8388607)
+ 107 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 86 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 
