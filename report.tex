@@ -41,17 +41,22 @@ The only other requirement is that the amplifer operates linearly.
 In contrast, digital circuits usually require a square wave clock signal.
 Ironically, a digital oscillator can be built starting from a basic digital component.
 
-A flip-flop is a digital circuit with two stable states, made from two cross-connected amplifiers.
+A latch is a digital circuit with two stable states, made from two cross-connected amplifiers.
 It is a fundamental component in digital logic.
-In fact, when a master and slave flip-flop are connected in series they form a 1-bit register used in CPUs.
+In fact, when a master and slave latch are connected in series they form a 1-bit, flip-flop register used in CPUs.
 Usually, the cross-connection between the two amplifiers is resistive and one amplifier
 will be driven in saturation while the other is in cutoff.
 Amplifier in digital circuits are usually driven between saturation and cutoff,
 making them unlinear, binary (two-state) devices.
 
-DIGITAL FLIP-FLOP AND FLIP FLOP WITH REACTIVE EMITTER COUPLING
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.6\textwidth]{diagrams/latches.png}
+	\caption{Digial Latch (left) and Latch with Reactive Emitter Coupling (right).}
+	\label{latches}
+\end{figure}
 
-If the cross-connection is made to be reactive, then the flip-flop may not be stable in either state.
+If the cross-connection is made to be reactive, then the latch may not be stable in either state.
 If it oscillates between the two states and produces a near-square wave, it is called a bistable multivibrator.
 A capacitor is usually used for the cross-connection because it delays the instantaneous voltage change
 that would normally occur when a transistor switches between saturation and cutoff.
@@ -63,21 +68,17 @@ Analog oscillators use an amplifier in a linear range; digital oscillators use d
 amplifier to its two limits.
 An analog oscillator may form unintentionally through parasitic feedback,
 such as through the Miller capacitance of a BJT.
-This happens to many frustrated students building amplifiers in Electronics Lab.
-\footnote{see my last lab}
 A digital osciallator may form unintentionally through propagation delay or carry-through
-logic. This happens to many frustrated students simulating a CPU in Computer Architecture.
+logic
 All of these comparisons between analog and digital oscillators can probably be gleaned
-from the block, system-level diagrams in figure \ref{oscillator-block-diagrams}.
+from the block-level diagrams in figure \ref{oscillator-block-diagrams}.
 
-OSCILLATOR BLOCK DIAGRAMS AND CORRESPONDING V-T SIGNALS
-
-The flip-flip circuit shown above was not really indended to oscillate.
-It can be improved by replacing the emitter resistors with constant current mirrors
-and adding voltage buffers in the cross-connections to improve charging time of the
-switching junctions and improve output resistance.
-
-ADVANCED CIRCUIT DIAGRAM
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.7\textwidth]{diagrams/block-level-oscillators}
+	\caption{An Analog Feedback Oscillator (left) Compared to Bistable Multivibrator (right)}
+	\label{oscillator-block-diagrams}
+\end{figure}
 
 \clearpage
 \section{Theory}
@@ -264,7 +265,7 @@ capacitance is negligible, and so is the delay in the BJT due to the rate of min
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=0.5\textwidth]{diagrams/simple-transient-circuit}
+	\includegraphics[width=0.45\textwidth]{diagrams/simple-transient-circuit}
 	\caption{Transient Circuit for Simple Emitter-Coupled Oscillator}
 	\label{simple-transient-circuit}
 \end{figure}
@@ -417,7 +418,7 @@ The improved circuit is shown in figure \ref{advanced-circuit}.
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=0.6\textwidth]{diagrams/advanced-circuit}
+	\includegraphics[width=0.8\textwidth]{diagrams/advanced-circuit}
 	\caption{Advanced Version of Astable Multivibrator}
 	\label{advanced-circuit}
 \end{figure}
@@ -455,7 +456,7 @@ by constant current sources. See figure \ref{advanced-circuit-without-mirrors}.
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=0.6\textwidth]{diagrams/advanced-circuit-without-mirrors}
+	\includegraphics[width=0.8\textwidth]{diagrams/advanced-circuit-without-mirrors}
 	\caption{Advanced Circuit with Equivalent Current Sources}
 	\label{advanced-circuit-without-mirrors}
 \end{figure}
@@ -506,7 +507,7 @@ The equivalent circuit for the transient analysis is shown in figure
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=0.5\textwidth]{diagrams/advanced-transient-circuit}
+	\includegraphics[width=0.45\textwidth]{diagrams/advanced-transient-circuit}
 	\caption{Transient Model for the Advanced Astable Multivibrator}
 	\label{advanced-transient-circuit}
 \end{figure}
@@ -581,7 +582,7 @@ C_{E}=\frac{I_{C(ave)}}{4f[V_{E(sat)}-V_{E(trig)}]}
 \subsection{Specifications}
 
 For this lab I needed to build a square wave, emitter-coupled oscillator
-that meets the specifications in table \ref{specifications-table}.
+that meets the specifications in table \ref{specs-table}.
 
 \begin{table}[ht]
 \centering
