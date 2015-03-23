@@ -413,6 +413,7 @@ C_{E}=\frac{1}{2R_{E}f*ln\left(\frac{2V_{E(sat)}-V_{E(trig)}}{V_{E(trig)}})\righ
 \label{ce-eq}
 \end{equation}
 
+\clearpage
 \subsection{Frequency Characteristics, Using MATLAB}
 
 To better visualized the effects of design parameters on the frequency of oscillation,
@@ -442,6 +443,7 @@ The generic MATLAB script that was used to generate these plots is include in ap
 	\label{vary-vpkpk}
 \end{figure}
 
+\clearpage
 \subsection{Advanced Circuit}
 \label{advanced-circuit-theory}
 
@@ -807,6 +809,7 @@ $C_{E(50MHz)}$	&25 pF	&equation \ref{ce-eq}	&14.57 pF	\\
 \label{simple-circuit-redesign-table}
 \end{table}
 
+\clearpage
 \subsection{Simple Circuit SPICE Simulation}
 
 The redesigned simple circuit was simulated in NGSPICE using the design values in table
@@ -821,18 +824,19 @@ which was reasonably close to 50 MHz, for which $C_{E}=50.4pF$ was calculated.
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=.5\textwidth]{ngspice/simple-circuit-output-50pF}
+	\includegraphics[width=.45\textwidth]{ngspice/simple-circuit-output-50pF}
 	\caption{Simulated Ouput Wave of Redesigned Simple Circuit}
 	\label{simple-circuit-output-50pF}
 \end{figure}
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=0.5\textwidth]{ngspice/simple-circuit-vcap-50pF}
+	\includegraphics[width=0.45\textwidth]{ngspice/simple-circuit-vcap-50pF}
 	\caption{Simulated Voltage Across $C_{E}$ for Redesigned Simple Circuit}
 	\label{simple-circuit-vcap-50pF}
 \end{figure}
 
+\clearpage
 \subsection{Advanced Circuit Design}
 
 The advanced circuit, shown in figure \ref{advanced-circuit},
@@ -896,6 +900,7 @@ The simulated frequency is almost exactly 50 MHz.
 \end{figure}
 
 
+\clearpage
 \section{Results}
 
 \subsection{Simple Circuit}
@@ -912,32 +917,33 @@ capacitors used were measured and recorded in table
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=0.8\textwidth]{results/simple-100kHz}
+	\includegraphics[width=0.7\textwidth]{results/simple-100kHz}
 	\caption{Redesigned Simple Circuit Tuned to 0.1 MHz}
 	\label{simple-100kHz}
 \end{figure}
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=0.8\textwidth]{results/simple-1MHz}
+	\includegraphics[width=0.7\textwidth]{results/simple-1MHz}
 	\caption{Redesigned Simple Circuit Tuned to 1 MHz}
 	\label{simple-1MHz}
 \end{figure}
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=0.8\textwidth]{results/simple-10MHz}
+	\includegraphics[width=0.7\textwidth]{results/simple-10MHz}
 	\caption{Redesigned Simple Circuit Tuned to 10 MHz}
 	\label{simple-10MHz}
 \end{figure}
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=0.8\textwidth]{results/simple-50MHz}
+	\includegraphics[width=0.7\textwidth]{results/simple-50MHz}
 	\caption{Redesigned Simple Circuit Tuned to 50 MHz}
 	\label{simple-50MHz}
 \end{figure}
 
+\clearpage
 \subsection{Advanced Circuit}
 
 The advanced circuit designed in table \ref{advanced-circuit-design-table}
@@ -952,32 +958,33 @@ capacitors used were measured and recorded in table
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=0.8\textwidth]{results/advanced-100kHz}
+	\includegraphics[width=0.7\textwidth]{results/advanced-100kHz}
 	\caption{Advanced Circuit Tuned to 0.1 MHz}
 	\label{advanced-100kHz}
 \end{figure}
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=0.8\textwidth]{results/advanced-1MHz}
+	\includegraphics[width=0.7\textwidth]{results/advanced-1MHz}
 	\caption{Advanced Circuit Tuned to 1 MHz}
 	\label{advanced-1MHz}
 \end{figure}
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=0.8\textwidth]{results/advanced-10MHz}
+	\includegraphics[width=0.7\textwidth]{results/advanced-10MHz}
 	\caption{Advanced Circuit Tuned to 10 MHz}
 	\label{advanced-10MHz}
 \end{figure}
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=0.8\textwidth]{results/advanced-50MHz}
+	\includegraphics[width=0.7\textwidth]{results/advanced-50MHz}
 	\caption{Advanced Circuit Tuned to 50 MHz}
 	\label{advanced-50MHz}
 \end{figure}
 
+\clearpage
 \subsection{Results Summary Table}
 
 The measured frequency and capacitance for all 8 experimental waveforms are
@@ -1002,6 +1009,7 @@ Advanced&0.1 MHz	&21.4 nF		&-			&94.6 kHz	&45.87 nF	&3.26 V		&square	\\
 		&50 MHz		&42.9 pF		&~50 MHz	&44.4 MHz	&20.57 pF	&2.51 V		&ocean waves	\\
 \hline\hline
 \end{tabular}
+\label{results-summary-table}
 \end{table}
 
 \section{Conclusions}

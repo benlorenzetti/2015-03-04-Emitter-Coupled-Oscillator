@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.28)  23 MAR 2015 16:10
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.28)  23 MAR 2015 16:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -381,65 +381,67 @@ ne 270.
  [5
 
  <./diagrams/simple-circuit.png (PNG copy)>] [6 <./diagrams/simple-transient-ci
-rcuit.png (PNG copy)>]
-<matlab/vary-ce-with-multiple-icsats.png, id=48, 480.29437pt x 370.38374pt>
+rcuit.png (PNG copy)>] [7]
+<matlab/vary-ce-with-multiple-icsats.png, id=52, 480.29437pt x 370.38374pt>
 File: matlab/vary-ce-with-multiple-icsats.png Graphic file (type png)
 
 <use matlab/vary-ce-with-multiple-icsats.png>
 Package pdftex.def Info: matlab/vary-ce-with-multiple-icsats.png used on input 
-line 426.
+line 427.
 (pdftex.def)             Requested size: 368.57965pt x 284.23558pt.
 
-<matlab/vary-vcc.png, id=50, 415.5525pt x 310.91156pt>
+<matlab/vary-vcc.png, id=54, 415.5525pt x 310.91156pt>
 File: matlab/vary-vcc.png Graphic file (type png)
 
 <use matlab/vary-vcc.png>
-Package pdftex.def Info: matlab/vary-vcc.png used on input line 433.
+Package pdftex.def Info: matlab/vary-vcc.png used on input line 434.
 (pdftex.def)             Requested size: 260.17465pt x 194.66556pt.
 
-<matlab/vary-vpkpk.png, id=51, 415.5525pt x 312.41719pt>
+<matlab/vary-vpkpk.png, id=55, 415.5525pt x 312.41719pt>
 File: matlab/vary-vpkpk.png Graphic file (type png)
 
 <use matlab/vary-vpkpk.png>
-Package pdftex.def Info: matlab/vary-vpkpk.png used on input line 440.
+Package pdftex.def Info: matlab/vary-vpkpk.png used on input line 441.
 (pdftex.def)             Requested size: 260.17465pt x 195.60825pt.
+ [8
 
-Overfull \hbox (1.26965pt too wide) in paragraph at lines 448--451
+ <./matlab/vary-ce-with-multiple-icsats.png>]
+[9 <./matlab/vary-vcc.png> <./matlab/vary-vpkpk.png>]
+Overfull \hbox (1.26965pt too wide) in paragraph at lines 450--453
 \OT1/cmr/m/n/10 The astable mul-ti-vi-bra-tor cir-cuit can be im-proved by addi
 ng volt-age buffers into the cross-connections
  []
 
-[7] <diagrams/advanced-circuit.png, id=56, 490.4724pt x 283.2984pt>
+<diagrams/advanced-circuit.png, id=65, 490.4724pt x 283.2984pt>
 File: diagrams/advanced-circuit.png Graphic file (type png)
 
 <use diagrams/advanced-circuit.png>
-Package pdftex.def Info: diagrams/advanced-circuit.png used on input line 454.
+Package pdftex.def Info: diagrams/advanced-circuit.png used on input line 456.
 (pdftex.def)             Requested size: 346.89732pt x 200.36948pt.
- [8 <./matlab/vary-ce-with-multiple-icsats.png>]
-<diagrams/advanced-circuit-without-mirrors.png, id=61, 434.5836pt x 227.8914pt>
+
+<diagrams/advanced-circuit-without-mirrors.png, id=66, 434.5836pt x 227.8914pt>
 File: diagrams/advanced-circuit-without-mirrors.png Graphic file (type png)
 <use diagrams/advanced-circuit-without-mirrors.png>
 Package pdftex.def Info: diagrams/advanced-circuit-without-mirrors.png used on 
-input line 492.
+input line 494.
 (pdftex.def)             Requested size: 346.89732pt x 181.91695pt.
+ [10
 
-<diagrams/advanced-transient-circuit.png, id=62, 233.1912pt x 152.2488pt>
+ <./diagrams/advanced-circuit.png (PNG copy)>]
+<diagrams/advanced-transient-circuit.png, id=70, 233.1912pt x 152.2488pt>
 File: diagrams/advanced-transient-circuit.png Graphic file (type png)
 
 <use diagrams/advanced-transient-circuit.png>
 Package pdftex.def Info: diagrams/advanced-transient-circuit.png used on input 
-line 544.
+line 546.
 (pdftex.def)             Requested size: 195.12767pt x 127.39792pt.
- [9 <./matlab/vary-vcc.png>]
-[10 <./matlab/vary-vpkpk.png>] [11 <./diagrams/advanced-circuit.png (PNG copy)>
-]
+ [11 <./diagrams/advanced-circuit-without-mirrors.png (PNG copy)>] [12 <./diagr
+ams/advanced-transient-circuit.png (PNG copy)>]
 File: diagrams/simple-circuit.png Graphic file (type png)
  <use diagrams/simple-circuit.png>
-Package pdftex.def Info: diagrams/simple-circuit.png used on input line 676.
+Package pdftex.def Info: diagrams/simple-circuit.png used on input line 678.
 (pdftex.def)             Requested size: 216.81pt x 121.57103pt.
- [12 <./diagrams/advanced-circuit-without-mirrors.png (PNG copy)> <./diagrams/a
-dvanced-transient-circuit.png (PNG copy)>]
-[13]
+ [13] [14] [15]
 Package epstopdf Info: Source file: <ngspice/simple-circuit-output-50pF.eps>
 (epstopdf)                    date: 2015-03-23 13:47:08
 (epstopdf)                    size: 23286 bytes
@@ -449,17 +451,17 @@ verted-to.pdf>
 (epstopdf)                    size: 8714 bytes
 (epstopdf)             Command: <repstopdf --outfile=ngspice/simple-circuit-out
 put-50pF-eps-converted-to.pdf ngspice/simple-circuit-output-50pF.eps>
-(epstopdf)             \includegraphics on input line 824.
+(epstopdf)             \includegraphics on input line 827.
 Package epstopdf Info: Output file is already uptodate.
 
-<ngspice/simple-circuit-output-50pF-eps-converted-to.pdf, id=81, 560.0925pt x 5
+<ngspice/simple-circuit-output-50pF-eps-converted-to.pdf, id=88, 560.0925pt x 5
 60.0925pt>
 File: ngspice/simple-circuit-output-50pF-eps-converted-to.pdf Graphic file (typ
 e pdf)
  <use ngspice/simple-circuit-output-50pF-eps-converted-to.pdf>
 Package pdftex.def Info: ngspice/simple-circuit-output-50pF-eps-converted-to.pd
-f used on input line 824.
-(pdftex.def)             Requested size: 216.81pt x 216.81139pt.
+f used on input line 827.
+(pdftex.def)             Requested size: 195.12767pt x 195.1294pt.
 Package epstopdf Info: Source file: <ngspice/simple-circuit-vcap-50pF.eps>
 (epstopdf)                    date: 2015-03-23 13:47:58
 (epstopdf)                    size: 16633 bytes
@@ -469,18 +471,21 @@ rted-to.pdf>
 (epstopdf)                    size: 8349 bytes
 (epstopdf)             Command: <repstopdf --outfile=ngspice/simple-circuit-vca
 p-50pF-eps-converted-to.pdf ngspice/simple-circuit-vcap-50pF.eps>
-(epstopdf)             \includegraphics on input line 831.
+(epstopdf)             \includegraphics on input line 834.
 Package epstopdf Info: Output file is already uptodate.
 
-<ngspice/simple-circuit-vcap-50pF-eps-converted-to.pdf, id=82, 560.0925pt x 560
+<ngspice/simple-circuit-vcap-50pF-eps-converted-to.pdf, id=89, 560.0925pt x 560
 .0925pt>
 File: ngspice/simple-circuit-vcap-50pF-eps-converted-to.pdf Graphic file (type 
 pdf)
  <use ngspice/simple-circuit-vcap-50pF-eps-converted-to.pdf>
 Package pdftex.def Info: ngspice/simple-circuit-vcap-50pF-eps-converted-to.pdf 
-used on input line 831.
-(pdftex.def)             Requested size: 216.81pt x 216.81139pt.
- [14]
+used on input line 834.
+(pdftex.def)             Requested size: 195.12767pt x 195.1294pt.
+ [16
+
+ <./ngspice/simple-circuit-output-50pF-eps-converted-to.pdf> <./ngspice/simple-
+circuit-vcap-50pF-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <ngspice/advanced-circuit-output-43pF.eps>
 (epstopdf)                    date: 2015-03-23 14:58:41
 (epstopdf)                    size: 27967 bytes
@@ -490,16 +495,16 @@ onverted-to.pdf>
 (epstopdf)                    size: 10431 bytes
 (epstopdf)             Command: <repstopdf --outfile=ngspice/advanced-circuit-o
 utput-43pF-eps-converted-to.pdf ngspice/advanced-circuit-output-43pF.eps>
-(epstopdf)             \includegraphics on input line 886.
+(epstopdf)             \includegraphics on input line 890.
 Package epstopdf Info: Output file is already uptodate.
 
-<ngspice/advanced-circuit-output-43pF-eps-converted-to.pdf, id=88, 560.0925pt x
- 560.0925pt>
+<ngspice/advanced-circuit-output-43pF-eps-converted-to.pdf, id=103, 560.0925pt 
+x 560.0925pt>
 File: ngspice/advanced-circuit-output-43pF-eps-converted-to.pdf Graphic file (t
 ype pdf)
  <use ngspice/advanced-circuit-output-43pF-eps-converted-to.pdf>
 Package pdftex.def Info: ngspice/advanced-circuit-output-43pF-eps-converted-to.
-pdf used on input line 886.
+pdf used on input line 890.
 (pdftex.def)             Requested size: 216.81pt x 216.81139pt.
 Package epstopdf Info: Source file: <ngspice/advanced-circuit-vcap-43pF.eps>
 (epstopdf)                    date: 2015-03-23 14:59:32
@@ -510,216 +515,213 @@ verted-to.pdf>
 (epstopdf)                    size: 8229 bytes
 (epstopdf)             Command: <repstopdf --outfile=ngspice/advanced-circuit-v
 cap-43pF-eps-converted-to.pdf ngspice/advanced-circuit-vcap-43pF.eps>
-(epstopdf)             \includegraphics on input line 893.
+(epstopdf)             \includegraphics on input line 897.
 Package epstopdf Info: Output file is already uptodate.
 
-<ngspice/advanced-circuit-vcap-43pF-eps-converted-to.pdf, id=89, 560.0925pt x 5
-60.0925pt>
+<ngspice/advanced-circuit-vcap-43pF-eps-converted-to.pdf, id=104, 560.0925pt x 
+560.0925pt>
 File: ngspice/advanced-circuit-vcap-43pF-eps-converted-to.pdf Graphic file (typ
 e pdf)
  <use ngspice/advanced-circuit-vcap-43pF-eps-converted-to.pdf>
 Package pdftex.def Info: ngspice/advanced-circuit-vcap-43pF-eps-converted-to.pd
-f used on input line 893.
+f used on input line 897.
 (pdftex.def)             Requested size: 216.81pt x 216.81139pt.
 
-<results/simple-100kHz.png, id=90, 803.0pt x 481.8pt>
+[17
+
+] [18 <./ngspice/advanced-circuit-output-43pF-eps-converted-to.pdf> <./ngspice/
+advanced-circuit-vcap-43pF-eps-converted-to.pdf>]
+<results/simple-100kHz.png, id=123, 803.0pt x 481.8pt>
 File: results/simple-100kHz.png Graphic file (type png)
 
 <use results/simple-100kHz.png>
-Package pdftex.def Info: results/simple-100kHz.png used on input line 915.
-(pdftex.def)             Requested size: 346.89732pt x 208.14037pt.
+Package pdftex.def Info: results/simple-100kHz.png used on input line 920.
+(pdftex.def)             Requested size: 303.53267pt x 182.12282pt.
 
-<results/simple-1MHz.png, id=91, 803.0pt x 481.8pt>
+<results/simple-1MHz.png, id=124, 803.0pt x 481.8pt>
 File: results/simple-1MHz.png Graphic file (type png)
 
 <use results/simple-1MHz.png>
-Package pdftex.def Info: results/simple-1MHz.png used on input line 922.
-(pdftex.def)             Requested size: 346.89732pt x 208.14037pt.
+Package pdftex.def Info: results/simple-1MHz.png used on input line 927.
+(pdftex.def)             Requested size: 303.53267pt x 182.12282pt.
 
-<results/simple-10MHz.png, id=92, 803.0pt x 481.8pt>
+<results/simple-10MHz.png, id=125, 803.0pt x 481.8pt>
 File: results/simple-10MHz.png Graphic file (type png)
 
 <use results/simple-10MHz.png>
-Package pdftex.def Info: results/simple-10MHz.png used on input line 929.
-(pdftex.def)             Requested size: 346.89732pt x 208.14037pt.
+Package pdftex.def Info: results/simple-10MHz.png used on input line 934.
+(pdftex.def)             Requested size: 303.53267pt x 182.12282pt.
 
-<results/simple-50MHz.png, id=93, 803.0pt x 481.8pt>
+<results/simple-50MHz.png, id=126, 803.0pt x 481.8pt>
 File: results/simple-50MHz.png Graphic file (type png)
 
 <use results/simple-50MHz.png>
-Package pdftex.def Info: results/simple-50MHz.png used on input line 936.
-(pdftex.def)             Requested size: 346.89732pt x 208.14037pt.
+Package pdftex.def Info: results/simple-50MHz.png used on input line 941.
+(pdftex.def)             Requested size: 303.53267pt x 182.12282pt.
+ [19
 
-<results/advanced-100kHz.png, id=94, 803.0pt x 481.8pt>
+ <./results/simple-100kHz.png (PNG copy)> <./results/simple-1MHz.png (PNG copy)
+>] [20 <./results/simple-10MHz.png (PNG copy)> <./results/simple-50MHz.png (PNG
+ copy)>]
+<results/advanced-100kHz.png, id=133, 803.0pt x 481.8pt>
 File: results/advanced-100kHz.png Graphic file (type png)
 
 <use results/advanced-100kHz.png>
-Package pdftex.def Info: results/advanced-100kHz.png used on input line 955.
-(pdftex.def)             Requested size: 346.89732pt x 208.14037pt.
+Package pdftex.def Info: results/advanced-100kHz.png used on input line 961.
+(pdftex.def)             Requested size: 303.53267pt x 182.12282pt.
 
-<results/advanced-1MHz.png, id=95, 803.0pt x 481.8pt>
+<results/advanced-1MHz.png, id=134, 803.0pt x 481.8pt>
 File: results/advanced-1MHz.png Graphic file (type png)
 
 <use results/advanced-1MHz.png>
-Package pdftex.def Info: results/advanced-1MHz.png used on input line 962.
-(pdftex.def)             Requested size: 346.89732pt x 208.14037pt.
+Package pdftex.def Info: results/advanced-1MHz.png used on input line 968.
+(pdftex.def)             Requested size: 303.53267pt x 182.12282pt.
 
-<results/advanced-10MHz.png, id=96, 803.0pt x 481.8pt>
+<results/advanced-10MHz.png, id=135, 803.0pt x 481.8pt>
 File: results/advanced-10MHz.png Graphic file (type png)
 
 <use results/advanced-10MHz.png>
-Package pdftex.def Info: results/advanced-10MHz.png used on input line 969.
-(pdftex.def)             Requested size: 346.89732pt x 208.14037pt.
+Package pdftex.def Info: results/advanced-10MHz.png used on input line 975.
+(pdftex.def)             Requested size: 303.53267pt x 182.12282pt.
 
-<results/advanced-50MHz.png, id=97, 803.0pt x 481.8pt>
+<results/advanced-50MHz.png, id=136, 803.0pt x 481.8pt>
 File: results/advanced-50MHz.png Graphic file (type png)
 
 <use results/advanced-50MHz.png>
-Package pdftex.def Info: results/advanced-50MHz.png used on input line 976.
-(pdftex.def)             Requested size: 346.89732pt x 208.14037pt.
+Package pdftex.def Info: results/advanced-50MHz.png used on input line 982.
+(pdftex.def)             Requested size: 303.53267pt x 182.12282pt.
+ [21
 
-
-LaTeX Warning: Reference `results-summary-table' on page 15 undefined on input 
-line 984.
-
-
-Overfull \hbox (68.11691pt too wide) in paragraph at lines 990--1005
+ <./results/advanced-100kHz.png (PNG copy)> <./results/advanced-1MHz.png (PNG c
+opy)>] [22 <./results/advanced-10MHz.png (PNG copy)> <./results/advanced-50MHz.
+png (PNG copy)>]
+Overfull \hbox (68.11691pt too wide) in paragraph at lines 997--1013
  [][] 
  []
 
-[15] [16 <./ngspice/simple-circuit-output-50pF-eps-converted-to.pdf>] [17 <./ng
-spice/simple-circuit-vcap-50pF-eps-converted-to.pdf>] [18 <./ngspice/advanced-c
-ircuit-output-43pF-eps-converted-to.pdf> <./ngspice/advanced-circuit-vcap-43pF-
-eps-converted-to.pdf>] [19 <./results/simple-100kHz.png (PNG copy)> <./results/
-simple-1MHz.png (PNG copy)>] [20 <./results/simple-10MHz.png (PNG copy)> <./res
-ults/simple-50MHz.png (PNG copy)>] [21 <./results/advanced-100kHz.png (PNG copy
-)> <./results/advanced-1MHz.png (PNG copy)>] [22 <./results/advanced-10MHz.png 
-(PNG copy)> <./results/advanced-50MHz.png (PNG copy)>]
-File: matlab/matlab-script.txt  (verbatim)
- [23
+[23
 
 ]
-<results/q1-characteristics.png, id=148, 462.528pt x 430.9701pt>
+File: matlab/matlab-script.txt  (verbatim)
+ [24
+
+] <results/q1-characteristics.png, id=151, 462.528pt x 430.9701pt>
 File: results/q1-characteristics.png Graphic file (type png)
 
 <use results/q1-characteristics.png>
-Package pdftex.def Info: results/q1-characteristics.png used on input line 1039
+Package pdftex.def Info: results/q1-characteristics.png used on input line 1047
 .
 (pdftex.def)             Requested size: 260.17465pt x 242.43323pt.
 
-<results/q2-characteristics.png, id=149, 455.59398pt x 431.67987pt>
+<results/q2-characteristics.png, id=152, 455.59398pt x 431.67987pt>
 File: results/q2-characteristics.png Graphic file (type png)
 
 <use results/q2-characteristics.png>
-Package pdftex.def Info: results/q2-characteristics.png used on input line 1045
+Package pdftex.def Info: results/q2-characteristics.png used on input line 1053
 .
 (pdftex.def)             Requested size: 260.17465pt x 246.53433pt.
 
-<results/q3-characteristics.png, id=150, 456.90161pt x 431.20294pt>
+<results/q3-characteristics.png, id=153, 456.90161pt x 431.20294pt>
 File: results/q3-characteristics.png Graphic file (type png)
 
 <use results/q3-characteristics.png>
-Package pdftex.def Info: results/q3-characteristics.png used on input line 1051
+Package pdftex.def Info: results/q3-characteristics.png used on input line 1059
 .
 (pdftex.def)             Requested size: 260.17465pt x 245.55136pt.
 
-<results/q4-characteristics.png, id=151, 457.71pt x 431.9337pt>
+<results/q4-characteristics.png, id=154, 457.71pt x 431.9337pt>
 File: results/q4-characteristics.png Graphic file (type png)
 
 <use results/q4-characteristics.png>
-Package pdftex.def Info: results/q4-characteristics.png used on input line 1057
+Package pdftex.def Info: results/q4-characteristics.png used on input line 1065
 .
 (pdftex.def)             Requested size: 260.17465pt x 245.5325pt.
 
-<results/q5-characteristics.png, id=152, 455.61522pt x 433.8609pt>
+<results/q5-characteristics.png, id=155, 455.61522pt x 433.8609pt>
 File: results/q5-characteristics.png Graphic file (type png)
 
 <use results/q5-characteristics.png>
-Package pdftex.def Info: results/q5-characteristics.png used on input line 1063
+Package pdftex.def Info: results/q5-characteristics.png used on input line 1071
 .
 (pdftex.def)             Requested size: 260.17465pt x 247.76007pt.
 
-<results/q6-characteristics.png, id=153, 455.3735pt x 429.2693pt>
+<results/q6-characteristics.png, id=156, 455.3735pt x 429.2693pt>
 File: results/q6-characteristics.png Graphic file (type png)
 
 <use results/q6-characteristics.png>
-Package pdftex.def Info: results/q6-characteristics.png used on input line 1069
+Package pdftex.def Info: results/q6-characteristics.png used on input line 1077
 .
 (pdftex.def)             Requested size: 260.17465pt x 245.27554pt.
 
-<results/q7-characteristics.png, id=154, 456.15845pt x 431.43pt>
+<results/q7-characteristics.png, id=157, 456.15845pt x 431.43pt>
 File: results/q7-characteristics.png Graphic file (type png)
 
 <use results/q7-characteristics.png>
-Package pdftex.def Info: results/q7-characteristics.png used on input line 1075
+Package pdftex.def Info: results/q7-characteristics.png used on input line 1083
 .
 (pdftex.def)             Requested size: 260.17465pt x 246.06905pt.
 
-<results/q8-characteristics.png, id=155, 458.2797pt x 428.51pt>
+<results/q8-characteristics.png, id=158, 458.2797pt x 428.51pt>
 File: results/q8-characteristics.png Graphic file (type png)
 
 <use results/q8-characteristics.png>
-Package pdftex.def Info: results/q8-characteristics.png used on input line 1081
+Package pdftex.def Info: results/q8-characteristics.png used on input line 1089
 .
 (pdftex.def)             Requested size: 260.17465pt x 243.28552pt.
 
-<results/q9-characteristics.png, id=156, 457.54723pt x 431.67987pt>
+<results/q9-characteristics.png, id=159, 457.54723pt x 431.67987pt>
 File: results/q9-characteristics.png Graphic file (type png)
 
 <use results/q9-characteristics.png>
-Package pdftex.def Info: results/q9-characteristics.png used on input line 1087
+Package pdftex.def Info: results/q9-characteristics.png used on input line 1095
 .
 (pdftex.def)             Requested size: 260.17465pt x 245.46725pt.
- [24
+ [25
 
  <./results/q1-characteristics.png>]
-[25 <./results/q2-characteristics.png> <./results/q3-characteristics.png>]
-[26 <./results/q4-characteristics.png> <./results/q5-characteristics.png>]
-[27 <./results/q6-characteristics.png> <./results/q7-characteristics.png>]
-[28 <./results/q8-characteristics.png> <./results/q9-characteristics.png>]
+[26 <./results/q2-characteristics.png> <./results/q3-characteristics.png>]
+[27 <./results/q4-characteristics.png> <./results/q5-characteristics.png>]
+[28 <./results/q6-characteristics.png> <./results/q7-characteristics.png>]
+[29 <./results/q8-characteristics.png> <./results/q9-characteristics.png>]
 File: ngspice/simple.cir  (verbatim)
 
-[29
+[30
 
 ]
 File: ngspice/advanced.cir  (verbatim)
- [30
+ [31
 
-] [31] (./report.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+] [32] (./report.aux) ) 
 Here is how much of TeX's memory you used:
  4591 strings out of 493304
  70941 string characters out of 6139871
- 160977 words of memory out of 5000000
+ 149990 words of memory out of 5000000
  7928 multiletter control sequences out of 15000+600000
  9191 words of font info for 34 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  38i,13n,38p,789b,286s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmtt10.pfb>
-Output written on report.pdf (33 pages, 1050897 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on report.pdf (34 pages, 1051515 bytes).
 PDF statistics:
- 243 PDF objects out of 1000 (max. 8388607)
- 148 compressed objects within 2 object streams
+ 246 PDF objects out of 1000 (max. 8388607)
+ 150 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  161 words of extra memory for PDF output out of 10000 (max. 10000000)
 

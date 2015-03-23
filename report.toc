@@ -4,22 +4,22 @@
 \contentsline {subsection}{\numberline {3.1}Bistable Latch}{3}
 \contentsline {subsection}{\numberline {3.2}Astable Multivibrator}{5}
 \contentsline {subsection}{\numberline {3.3}Frequency Characteristics, Using MATLAB}{8}
-\contentsline {subsection}{\numberline {3.4}Advanced Circuit}{8}
-\contentsline {section}{\numberline {4}Design and Simulation}{11}
-\contentsline {subsection}{\numberline {4.1}Specifications}{11}
-\contentsline {subsection}{\numberline {4.2}BJT Characterization}{12}
-\contentsline {subsection}{\numberline {4.3}Simple Circuit Design}{12}
-\contentsline {subsection}{\numberline {4.4}Simple Circuit Redesign}{13}
-\contentsline {subsection}{\numberline {4.5}Simple Circuit SPICE Simulation}{14}
-\contentsline {subsection}{\numberline {4.6}Advanced Circuit Design}{14}
-\contentsline {subsection}{\numberline {4.7}Advanced Circuit SPICE Simulation}{15}
-\contentsline {section}{\numberline {5}Results}{15}
-\contentsline {subsection}{\numberline {5.1}Simple Circuit}{15}
-\contentsline {subsection}{\numberline {5.2}Advanced Circuit}{15}
-\contentsline {subsection}{\numberline {5.3}Results Summary Table}{15}
-\contentsline {section}{\numberline {6}Conclusions}{16}
-\contentsline {section}{\numberline {7}Appendices}{23}
-\contentsline {subsection}{\numberline {7.1}MATLAB Script for Frequency Function}{23}
-\contentsline {subsection}{\numberline {7.2}BJT Characterization Curves}{24}
-\contentsline {subsection}{\numberline {7.3}SPICE Netlist for Simple Circuit}{29}
-\contentsline {subsection}{\numberline {7.4}SPICE Netlist for Advanced Circuit}{30}
+\contentsline {subsection}{\numberline {3.4}Advanced Circuit}{10}
+\contentsline {section}{\numberline {4}Design and Simulation}{13}
+\contentsline {subsection}{\numberline {4.1}Specifications}{13}
+\contentsline {subsection}{\numberline {4.2}BJT Characterization}{13}
+\contentsline {subsection}{\numberline {4.3}Simple Circuit Design}{13}
+\contentsline {subsection}{\numberline {4.4}Simple Circuit Redesign}{14}
+\contentsline {subsection}{\numberline {4.5}Simple Circuit SPICE Simulation}{16}
+\contentsline {subsection}{\numberline {4.6}Advanced Circuit Design}{17}
+\contentsline {subsection}{\numberline {4.7}Advanced Circuit SPICE Simulation}{17}
+\contentsline {section}{\numberline {5}Results}{19}
+\contentsline {subsection}{\numberline {5.1}Simple Circuit}{19}
+\contentsline {subsection}{\numberline {5.2}Advanced Circuit}{21}
+\contentsline {subsection}{\numberline {5.3}Results Summary Table}{23}
+\contentsline {section}{\numberline {6}Conclusions}{23}
+\contentsline {section}{\numberline {7}Appendices}{24}
+\contentsline {subsection}{\numberline {7.1}MATLAB Script for Frequency Function}{24}
+\contentsline {subsection}{\numberline {7.2}BJT Characterization Curves}{25}
+\contentsline {subsection}{\numberline {7.3}SPICE Netlist for Simple Circuit}{30}
+\contentsline {subsection}{\numberline {7.4}SPICE Netlist for Advanced Circuit}{31}
