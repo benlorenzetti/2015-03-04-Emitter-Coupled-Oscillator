@@ -989,20 +989,41 @@ Also included in the table is the output amplitude and a qualitative description
 \caption{Results Summary Table}
 \begin{tabular}{c | c | c | c | c | c | c | c}
 \hline\hline
-Circuit	&Design $f$	&Design $C_{E}$	&SPICE $f$	&$f$	&$C_{E}$	&$V_{pkpk}$	&Wave Shape	\\
+Circuit	&Design $f$	&Design $C_{E}$	&SPICE $f$	&$f$		&$C_{E}$	&$V_{pkpk}$	&Wave Shape	\\
 \hline\hline
-Simple	&0.1 MHz	&25.2 nF		&-			&		&27.7 nF	&			&	\\
-		&1 MHz		&2.52 nF		&-			&		&1.92 nF	&			&	\\
-		&10 MHz		&252 pF			&-			&		&153.4 pF	&			&	\\
-		&50 MHz		&25.2 pF		&~40 MHz	&		&14.57 pF	&			&	\\
+Simple	&0.1 MHz	&25.2 nF		&-			&97.4 kHz	&27.7 nF	&3.44 V		&square with slight slope\\
+		&1 MHz		&2.52 nF		&-			&1.13 MHz	&1.92 nF	&3.38 V		&mostly square	\\
+		&10 MHz		&252 pF			&-			&9.56 MHz	&153.4 pF	&3.31 V		&Yosimite Half Dome	\\
+		&50 MHz		&25.2 pF		&~40 MHz	&49.1 MHz	&14.57 pF	&1.24 V		&triangular	\\
 \hline
-Advanced&0.1 MHz	&21.4 nF		&-			&		&45.87 nF	&			&	\\
-		&1 MHz		&2.14 nF		&-			&		&3.08 nF	&			&	\\
-		&10 MHz		&214 pF			&-			&		&213.1 pF	&			&	\\
-		&50 MHz		&42.9 pF		&~50 MHz	&		&20.57 pF	&			&	\\
+Advanced&0.1 MHz	&21.4 nF		&-			&94.6 kHz	&45.87 nF	&3.26 V		&square	\\
+		&1 MHz		&2.14 nF		&-			&1.21 MHz	&3.08 nF	&3.40 V		&square with higher harmonics	\\
+		&10 MHz		&214 pF			&-			&10.9 MHz	&213.1 pF	&5.08 V		&distorded	\\
+		&50 MHz		&42.9 pF		&~50 MHz	&44.4 MHz	&20.57 pF	&2.51 V		&ocean waves	\\
 \hline\hline
 \end{tabular}
 \end{table}
+
+\section{Conclusions}
+
+Both the simple circuit and advanced circuits were successful in meeting the specifications outlined for lab.
+The simple circuit was able to achieve oscillations at 50 MHz, albeit with reduced ouptut voltage. At frequencies
+below 50 MHz the simple circuit achieved its targeted output voltage of $>2 V_{pkpk}$ and had generally square
+properties.
+The advanced circuit produced a near perfect square wave at lower frequencies and was able to oscillate at up
+to $44 MHz$ while still achieving the targeted output voltage. At higher frequencies the square wave morphed
+into a rounded triagular wave.
+
+The theory sections were able to predict the operation of the circuits very accurately for the lower frequencies.
+At higher frequencies the results were slightly skewed because parasitic capacitance and minority carrier drift
+rates were not considered. The simulations also agreed with the results, although they failed to predict the lower
+limits of the coupling capacitance for which the real circuit would still operate.
+
+The circuits could be further inproved by optimizing the design to reduce $R_{1}$ in the cross-connecting
+voltage dividers. This would reduce the charging delay caused by the parasitic base-emitter junction capacites.
+Another inprovement would be reducing $V_{CC}$ so that smaller power resistors could still be used. Furthermore,
+$V_{CC}$ would likely have to be lowered in order to reduce the resistance $R_{1}$.
+
 \clearpage
 \section{Appendices}
 \subsection{MATLAB Script for Frequency Function}
