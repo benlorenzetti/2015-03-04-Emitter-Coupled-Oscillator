@@ -231,6 +231,7 @@ The emitter potential for the saturation transistor is set by the top half becau
 it follow the base. Taking the saturation base voltage from equation \ref{base-voltages}...
 \begin{equation}
 V_{E(sat)}=\frac{R_{2}}{R_{1}+R_{2}}V_{CC}-V_{BE(on)}
+\label{ve-sat-eq}
 \end{equation}
 
 In a perfect world,
@@ -275,6 +276,7 @@ In turn, this forces $Q_{1}$ off through the cross connection.
 This trigger occurs when $v_{E2(off)}$ breaks the stability condition.
 \begin{equation}
 V_{E(trig)}=\frac{R_{2}}{R_{1}+R_{2}}(V_{CC}-V_{pkpk})-V_{BE(on)}
+\label{ve-trig-eq}
 \end{equation}
 
 Immediately before the trigger occurs, the voltage at E1 is $V_{E(sat)}$ and
@@ -587,7 +589,7 @@ that meets the specifications in table \ref{specs-table}.
 \begin{table}[ht]
 \centering
 \caption{Emitter-Coupled Oscillator Design Specifications}
-\begin{tabular}{c c c}
+\begin{tabular}{c | c | c}
 \hline\hline
 Parameter	&Notation	&Value	\\
 \hline\hline
@@ -607,34 +609,60 @@ Average $I_{C}$ of Switching Transistor	&$\frac{I_{C(sat)}}{2}$	&6 mA	\\
 An astable multivibrator was designed with the theory derived in sections
 \ref{bistable-latch} and \ref{astable-multivibrator} in order to meet the
 specifications for the lab in table \ref{specs-table}.
-The circuit is shown in figure \ref{simple-circuit-2}
-and the designed component values are shown in table \ref{simple-circuit-design-table}.
+The circuit diagram is shown again in figure \ref{simple-circuit-2}.
+
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=.6\textwidth]{diagrams/simple-circuit}
+	\includegraphics[width=.5\textwidth]{diagrams/simple-circuit}
 	\caption{Simple Circuit Diagram}
 	\label{simple-circuit-2}
 \end{figure}
 
+Table \ref{simple-circuit-design-table} shows the values that were calculated
+while designing the circuit and the corresponding equations used.
+
 \begin{table}[ht]
 \centering
-\caption{Simple Circuit Designed with $V_{CC}=24V$, $V_{pkpk}=2.4V$, $I_{C(sat)}=12mA$.}
-\begin{tabular}{c | c | c | c}
+\caption{Original Simple Circuit Design}
+\begin{tabular}{c | c | c}
 \hline\hline
-Component	&Designed Value	&Measured Value	&Design Method	\\
+Parameter	&Designed Value	&Design Method	\\
 \hline\hline
-$R_{C}$	&$200\Omega$	&-	&equation \ref{rc-eq}	\\
-$R_{1}+R_{2}$	&$20k\Omega$	&-	&equation \ref{r1r2-eq}	\\
-$\frac{R_{2}}{R_{1}+R_{2}}$	&0.917	&-	&equation \ref{stability-conditions}	\\
-$R_{2}$	&$18.3k\Omega$	&-	&$R_{2}=\frac{R_{2}}{R_{1}+R_{2}}(R_{1}+R_{2})$	\\
-$R_{1}$	&$1.7k\Omega$	&-	&$R_{1}=(R_{1}+R_{2})-R_{2}$	\\
-$R_{E}$	&$1.7k\Omega$	&-	&equation \ref{re-eq}	\\
-$C_{E(50MHz)}$	&
+$V_{CC}$	&24 V	&specified	\\
+$V_{pkpk}$	&2.4 V	&specified $+20\%$	\\
+$I_{C(sat)}$	&12 mA	&$2*I_{C(ave)}$	\\
+$R_{1}+R_{2}$	&$20k\Omega$	&equation \ref{r1r2-eq}	\\
+$\frac{R_{2}}{R_{1}+R_{2}}$	&0.917	&equation \ref{stability-conditions}	\\
+$V_{E(sat)}$	&21.31 V	&equation \ref{ve-sat-eq}	\\
+$V_{E(trig)}$	&19.47 V	&equation \ref{ve-trig-eq}	\\
+\hline
+Component	&Designed Value	&Design Method	\\
+\hline
+$R_{C}$	&$200\Omega$	&equation \ref{rc-eq}	\\
+$R_{2}$	&$18.3k\Omega$	&$R_{2}=\frac{R_{2}}{R_{1}+R_{2}}(R_{1}+R_{2})$	\\
+$R_{1}$	&$1.7k\Omega$	&$R_{1}=(R_{1}+R_{2})-R_{2}$	\\
+$R_{E}$	&$1.7k\Omega$	&equation \ref{re-eq}	\\
+$C_{E(0.1MHz)}$	&17,000 pF	&equation \ref{ce-eq}	\\
+$C_{E(1MHz)}$	&1,700 pF	&equation \ref{ce-eq}	\\
+$C_{E(10MHz)}$	&170 pF	&equation \ref{ce-eq}	\\
+$C_{E(50MHz)}$	&17 pF	&equation \ref{ce-eq}	\\
+\hline\hline
 \end{tabular}
 \label{simple-circuit-design-table}
 \end{table}
 
-table of designed values, equations, and measured values.
+When the simple circuit was built according to the original design in table
+\ref{simple-circuit-design-table},
+square wave oscillations were observed but the higher frequencies could not be achieved.
+The most likely cause of this limitation was the delay time associated with charging the
+parasitic base-emitter junction capacities. Charge has to flow through $R_{1}$ and collect
+on the base for some time.
+A quick, back-of-the-hand calculation with the junction capacities in table \ref{bjt-characterization-table}
+shows this is on the order of 10 ns.
+\begin{equation*}
+\tau=R_{1}C_{JE}=8.9ns\quad\quad f=111MHz
+\end{equation*}
+
 
 \subsection{Simple Circuit Redesign}
 
