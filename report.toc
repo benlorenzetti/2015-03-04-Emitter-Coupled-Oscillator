@@ -14,3 +14,5 @@
 \contentsline {subsection}{\numberline {4.6}Advanced Circuit Design}{12}
 \contentsline {subsection}{\numberline {4.7}Advanced Circuit SPICE Simulation}{12}
 \contentsline {section}{\numberline {5}Results}{12}
+\contentsline {section}{\numberline {6}Appendices}{12}
+\contentsline {subsection}{\numberline {6.1}BJT Characterization Curves}{13}

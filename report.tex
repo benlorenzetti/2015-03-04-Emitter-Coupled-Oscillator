@@ -596,13 +596,40 @@ Parameter	&Notation	&Value	\\
 Power Supply	&$V_{CC}$	&24 V	\\
 Output Signal Amplitude	&$V_{pkpk}$	&2 V	\\
 Maximum Frequency	&$f$	&50 MHz	\\
-Average $I_{C}$ of Switching Transistor	&$\frac{I_{C(sat)}}{2}$	&6 mA	\\
+Average $I_{C}$ of Switching Transistor	&$I_{C(ave)}$	&6 mA	\\
 \hline\hline
 \end{tabular}
 \label{specs-table}
 \end{table}
 
 \subsection{BJT Characterization}
+
+Nine 2N3904 BJTs were characterized on the Tektronix Curve Tracer and HP LCR Meter,
+for use in the simple and advanced circuits. The important
+characteristics are summarized in table \ref{bjt-characteristics-table}.
+All nine collector-emitter I-V curves are included in appendix
+\ref{bjt-appendix}.
+
+\begin{table}[ht]
+\centering
+\caption{BJT Measured Characteristics}
+\begin{tabular}{c | c | c | c | c}
+\hline\hline
+Label	&$\beta$	&$C_{JC}$	&$C_{JE}$	&$V_{A}$	\\
+\hline\hline
+$Q_{1}$	&176	&3.291 pF	&5.255 pF	&121 V	\\
+$Q_{2}$	&153	&3.199 pF	&5.235 pF	&120 V	\\
+$Q_{3}$	&294	&4.224 pF	&9.605 pF	&116 V	\\
+$Q_{4}$	&171	&3.304 pF	&5.291 pF	&118 V	\\
+$Q_{5}$	&171	&3.309 pF	&5.252 pF	&118 V	\\
+$Q_{6}$	&170	&3.306 pF	&5.213 pF	&117 V	\\
+$Q_{7}$	&170	&3.288 pF	&5.287 pF	&117 V	\\
+$Q_{8}$	&175	&3.306 pF	&5.242 pF	&89.5 V	\\
+$Q_{9}$	&201	&3.222 pF	&4.9464 pF	&119 V	\\
+\hline\hline
+\end{tabular}
+\label{bjt-characteristics-table}
+\end{table}
 
 \subsection{Simple Circuit Design}
 
@@ -657,7 +684,7 @@ square wave oscillations were observed but the higher frequencies could not be a
 The most likely cause of this limitation was the delay time associated with charging the
 parasitic base-emitter junction capacities. Charge has to flow through $R_{1}$ and collect
 on the base for some time.
-A quick, back-of-the-hand calculation with the junction capacities in table \ref{bjt-characterization-table}
+A quick, back-of-the-hand calculation with the junction capacities in table \ref{bjt-characteristics-table}
 shows this is on the order of 10 ns.
 \begin{equation*}
 \tau=R_{1}C_{JE}=8.9ns\quad\quad f=111MHz
@@ -673,4 +700,65 @@ shows this is on the order of 10 ns.
 \subsection{Advanced Circuit SPICE Simulation}
 
 \section{Results}
+
+\section{Appendices}
+
+\clearpage
+\subsection{BJT Characterization Curves}
+\label{bjt-appendix}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.6\textwidth]{results/q1-characteristics}
+	\caption{$Q_{1}$ Characteristic Collector-Emitter I-V Curve}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.6\textwidth]{results/q2-characteristics}
+	\caption{$Q_{2}$ Characteristic Collector-Emitter I-V Curve}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.6\textwidth]{results/q3-characteristics}
+	\caption{$Q_{3}$ Characteristic Collector-Emitter I-V Curve}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.6\textwidth]{results/q4-characteristics}
+	\caption{$Q_{4}$ Characteristic Collector-Emitter I-V Curve}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.6\textwidth]{results/q5-characteristics}
+	\caption{$Q_{5}$ Characteristic Collector-Emitter I-V Curve}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.6\textwidth]{results/q6-characteristics}
+	\caption{$Q_{6}$ Characteristic Collector-Emitter I-V Curve}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.6\textwidth]{results/q7-characteristics}
+	\caption{$Q_{7}$ Characteristic Collector-Emitter I-V Curve}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.6\textwidth]{results/q8-characteristics}
+	\caption{$Q_{8}$ Characteristic Collector-Emitter I-V Curve}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.6\textwidth]{results/q9-characteristics}
+	\caption{$Q_{9}$ Characteristic Collector-Emitter I-V Curve}
+\end{figure}
+
 \end{document}
