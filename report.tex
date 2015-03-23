@@ -821,19 +821,26 @@ which was reasonably close to 50 MHz, for which $C_{E}=50.4pF$ was calculated.
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=.55\textwidth]{ngspice/simple-circuit-output-50pF}
+	\includegraphics[width=.5\textwidth]{ngspice/simple-circuit-output-50pF}
 	\caption{Simulated Ouput Wave of Redesigned Simple Circuit}
 	\label{simple-circuit-output-50pF}
 \end{figure}
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=0.55\textwidth]{ngspice/simple-circuit-vcap-50pF}
+	\includegraphics[width=0.5\textwidth]{ngspice/simple-circuit-vcap-50pF}
 	\caption{Simulated Voltage Across $C_{E}$ for Redesigned Simple Circuit}
 	\label{simple-circuit-vcap-50pF}
 \end{figure}
 
 \subsection{Advanced Circuit Design}
+
+The advanced circuit, shown in figure \ref{advanced-circuit},
+was designed according to the theory in section
+\ref{advanced-circuit-theory} in order to meet the specifications in table
+\ref{specs-table}. The values calculated and equations used are collected
+chronologically (in the order of calculation) in table
+\ref{advanced-circuit-design-table}.
 
 \begin{table}[ht]
 \centering
@@ -867,6 +874,27 @@ $C_{E(50MHz)}$	&42.9 pF	&equation \ref{advanced-ce-eq}	&20.57 pF	\\
 \end{table}
 
 \subsection{Advanced Circuit SPICE Simulation}
+
+The advanced circuit with designed values was simulated using NGSPICE
+with the netlist shown in appendix \ref{advanced-circuit-netlist}.
+The transient simulation using $C_{E}=42.9pF$ is shown in figures
+\ref{advanced-circuit-output-43pF} and \ref{advanced-circuit-vcap-43pF}.
+The simulated frequency is almost exactly 50 MHz.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=.5\textwidth]{ngspice/advanced-circuit-output-43pF}
+	\caption{Simulated Ouput Wave of Advanced Circuit}
+	\label{advanced-circuit-output-43pF}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.5\textwidth]{ngspice/advanced-circuit-vcap-43pF}
+	\caption{Simulated Voltage Across $C_{E}$ for Advanced Circuit}
+	\label{advanced-circuit-vcap-43pF}
+\end{figure}
+
 
 \section{Results}
 
@@ -943,5 +971,16 @@ in the standard netlist format for SPICE. The nodes in the netlist correspond to
 nodes in the circuit diagram. The netlist below was then piped to NGSPICE for simulation.
 
 \verbatiminput{ngspice/simple.cir}
+
+\clearpage
+\subsection{SPICE Netlist for Advanced Circuit}
+\label{advanced-circuit-netlist}
+
+The circuit diagram in figure \ref{advanced-circuit} was used to generate a netlist for
+simulating the advanced circuit. The nodes and component names correspond to the labeling
+on the circuit diagram and the values correspond to the design values in table
+\ref{advanced-circuit-design-table}.
+
+\verbatiminput{ngspice/advanced.cir}
 
 \end{document}

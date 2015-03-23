@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.28)  23 MAR 2015 14:36
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.28)  23 MAR 2015 15:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -459,7 +459,7 @@ e pdf)
  <use ngspice/simple-circuit-output-50pF-eps-converted-to.pdf>
 Package pdftex.def Info: ngspice/simple-circuit-output-50pF-eps-converted-to.pd
 f used on input line 824.
-(pdftex.def)             Requested size: 238.49232pt x 238.49338pt.
+(pdftex.def)             Requested size: 216.81pt x 216.81139pt.
 Package epstopdf Info: Source file: <ngspice/simple-circuit-vcap-50pF.eps>
 (epstopdf)                    date: 2015-03-23 13:47:58
 (epstopdf)                    size: 16633 bytes
@@ -479,127 +479,174 @@ pdf)
  <use ngspice/simple-circuit-vcap-50pF-eps-converted-to.pdf>
 Package pdftex.def Info: ngspice/simple-circuit-vcap-50pF-eps-converted-to.pdf 
 used on input line 831.
-(pdftex.def)             Requested size: 238.49232pt x 238.49338pt.
+(pdftex.def)             Requested size: 216.81pt x 216.81139pt.
  [14]
-[15 <./ngspice/simple-circuit-output-50pF-eps-converted-to.pdf>] [16 <./ngspice
-/simple-circuit-vcap-50pF-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <ngspice/advanced-circuit-output-43pF.eps>
+(epstopdf)                    date: 2015-03-23 14:58:41
+(epstopdf)                    size: 27967 bytes
+(epstopdf)             Output file: <ngspice/advanced-circuit-output-43pF-eps-c
+onverted-to.pdf>
+(epstopdf)                    date: 2015-03-23 15:07:00
+(epstopdf)                    size: 10431 bytes
+(epstopdf)             Command: <repstopdf --outfile=ngspice/advanced-circuit-o
+utput-43pF-eps-converted-to.pdf ngspice/advanced-circuit-output-43pF.eps>
+(epstopdf)             \includegraphics on input line 886.
+Package epstopdf Info: Output file is already uptodate.
+
+<ngspice/advanced-circuit-output-43pF-eps-converted-to.pdf, id=88, 560.0925pt x
+ 560.0925pt>
+File: ngspice/advanced-circuit-output-43pF-eps-converted-to.pdf Graphic file (t
+ype pdf)
+ <use ngspice/advanced-circuit-output-43pF-eps-converted-to.pdf>
+Package pdftex.def Info: ngspice/advanced-circuit-output-43pF-eps-converted-to.
+pdf used on input line 886.
+(pdftex.def)             Requested size: 216.81pt x 216.81139pt.
+Package epstopdf Info: Source file: <ngspice/advanced-circuit-vcap-43pF.eps>
+(epstopdf)                    date: 2015-03-23 14:59:32
+(epstopdf)                    size: 16641 bytes
+(epstopdf)             Output file: <ngspice/advanced-circuit-vcap-43pF-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2015-03-23 15:07:00
+(epstopdf)                    size: 8229 bytes
+(epstopdf)             Command: <repstopdf --outfile=ngspice/advanced-circuit-v
+cap-43pF-eps-converted-to.pdf ngspice/advanced-circuit-vcap-43pF.eps>
+(epstopdf)             \includegraphics on input line 893.
+Package epstopdf Info: Output file is already uptodate.
+
+<ngspice/advanced-circuit-vcap-43pF-eps-converted-to.pdf, id=89, 560.0925pt x 5
+60.0925pt>
+File: ngspice/advanced-circuit-vcap-43pF-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use ngspice/advanced-circuit-vcap-43pF-eps-converted-to.pdf>
+Package pdftex.def Info: ngspice/advanced-circuit-vcap-43pF-eps-converted-to.pd
+f used on input line 893.
+(pdftex.def)             Requested size: 216.81pt x 216.81139pt.
+
+[15] [16 <./ngspice/simple-circuit-output-50pF-eps-converted-to.pdf> <./ngspice
+/simple-circuit-vcap-50pF-eps-converted-to.pdf>] [17 <./ngspice/advanced-circui
+t-output-43pF-eps-converted-to.pdf>] [18 <./ngspice/advanced-circuit-vcap-43pF-
+eps-converted-to.pdf>]
 File: matlab/matlab-script.txt  (verbatim)
- [17
+ [19
 
 ]
-<results/q1-characteristics.png, id=109, 462.528pt x 430.9701pt>
+<results/q1-characteristics.png, id=127, 462.528pt x 430.9701pt>
 File: results/q1-characteristics.png Graphic file (type png)
 
 <use results/q1-characteristics.png>
-Package pdftex.def Info: results/q1-characteristics.png used on input line 885.
+Package pdftex.def Info: results/q1-characteristics.png used on input line 913.
 
 (pdftex.def)             Requested size: 260.17465pt x 242.43323pt.
 
-<results/q2-characteristics.png, id=110, 455.59398pt x 431.67987pt>
+<results/q2-characteristics.png, id=128, 455.59398pt x 431.67987pt>
 File: results/q2-characteristics.png Graphic file (type png)
 
 <use results/q2-characteristics.png>
-Package pdftex.def Info: results/q2-characteristics.png used on input line 891.
+Package pdftex.def Info: results/q2-characteristics.png used on input line 919.
 
 (pdftex.def)             Requested size: 260.17465pt x 246.53433pt.
 
-<results/q3-characteristics.png, id=111, 456.90161pt x 431.20294pt>
+<results/q3-characteristics.png, id=129, 456.90161pt x 431.20294pt>
 File: results/q3-characteristics.png Graphic file (type png)
 
 <use results/q3-characteristics.png>
-Package pdftex.def Info: results/q3-characteristics.png used on input line 897.
+Package pdftex.def Info: results/q3-characteristics.png used on input line 925.
 
 (pdftex.def)             Requested size: 260.17465pt x 245.55136pt.
 
-<results/q4-characteristics.png, id=112, 457.71pt x 431.9337pt>
+<results/q4-characteristics.png, id=130, 457.71pt x 431.9337pt>
 File: results/q4-characteristics.png Graphic file (type png)
 
 <use results/q4-characteristics.png>
-Package pdftex.def Info: results/q4-characteristics.png used on input line 903.
+Package pdftex.def Info: results/q4-characteristics.png used on input line 931.
 
 (pdftex.def)             Requested size: 260.17465pt x 245.5325pt.
 
-<results/q5-characteristics.png, id=113, 455.61522pt x 433.8609pt>
+<results/q5-characteristics.png, id=131, 455.61522pt x 433.8609pt>
 File: results/q5-characteristics.png Graphic file (type png)
 
 <use results/q5-characteristics.png>
-Package pdftex.def Info: results/q5-characteristics.png used on input line 909.
+Package pdftex.def Info: results/q5-characteristics.png used on input line 937.
 
 (pdftex.def)             Requested size: 260.17465pt x 247.76007pt.
 
-<results/q6-characteristics.png, id=114, 455.3735pt x 429.2693pt>
+<results/q6-characteristics.png, id=132, 455.3735pt x 429.2693pt>
 File: results/q6-characteristics.png Graphic file (type png)
 
 <use results/q6-characteristics.png>
-Package pdftex.def Info: results/q6-characteristics.png used on input line 915.
+Package pdftex.def Info: results/q6-characteristics.png used on input line 943.
 
 (pdftex.def)             Requested size: 260.17465pt x 245.27554pt.
 
-<results/q7-characteristics.png, id=115, 456.15845pt x 431.43pt>
+<results/q7-characteristics.png, id=133, 456.15845pt x 431.43pt>
 File: results/q7-characteristics.png Graphic file (type png)
 
 <use results/q7-characteristics.png>
-Package pdftex.def Info: results/q7-characteristics.png used on input line 921.
+Package pdftex.def Info: results/q7-characteristics.png used on input line 949.
 
 (pdftex.def)             Requested size: 260.17465pt x 246.06905pt.
 
-<results/q8-characteristics.png, id=116, 458.2797pt x 428.51pt>
+<results/q8-characteristics.png, id=134, 458.2797pt x 428.51pt>
 File: results/q8-characteristics.png Graphic file (type png)
 
 <use results/q8-characteristics.png>
-Package pdftex.def Info: results/q8-characteristics.png used on input line 927.
+Package pdftex.def Info: results/q8-characteristics.png used on input line 955.
 
 (pdftex.def)             Requested size: 260.17465pt x 243.28552pt.
 
-<results/q9-characteristics.png, id=117, 457.54723pt x 431.67987pt>
+<results/q9-characteristics.png, id=135, 457.54723pt x 431.67987pt>
 File: results/q9-characteristics.png Graphic file (type png)
 
 <use results/q9-characteristics.png>
-Package pdftex.def Info: results/q9-characteristics.png used on input line 933.
+Package pdftex.def Info: results/q9-characteristics.png used on input line 961.
 
 (pdftex.def)             Requested size: 260.17465pt x 245.46725pt.
- [18
+ [20
 
  <./results/q1-characteristics.png>]
-[19 <./results/q2-characteristics.png> <./results/q3-characteristics.png>]
-[20 <./results/q4-characteristics.png> <./results/q5-characteristics.png>]
-[21 <./results/q6-characteristics.png> <./results/q7-characteristics.png>]
-[22 <./results/q8-characteristics.png> <./results/q9-characteristics.png>]
+[21 <./results/q2-characteristics.png> <./results/q3-characteristics.png>]
+[22 <./results/q4-characteristics.png> <./results/q5-characteristics.png>]
+[23 <./results/q6-characteristics.png> <./results/q7-characteristics.png>]
+[24 <./results/q8-characteristics.png> <./results/q9-characteristics.png>]
 File: ngspice/simple.cir  (verbatim)
 
-[23
+[25
 
-] (./report.aux) ) 
+]
+File: ngspice/advanced.cir  (verbatim)
+ [26
+
+] [27] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 4527 strings out of 493304
- 69045 string characters out of 6139871
- 157866 words of memory out of 5000000
- 7875 multiletter control sequences out of 15000+600000
+ 4542 strings out of 493304
+ 69710 string characters out of 6139871
+ 158897 words of memory out of 5000000
+ 7887 multiletter control sequences out of 15000+600000
  9191 words of font info for 34 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,13n,38p,789b,287s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx1
-2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on report.pdf (25 pages, 791048 bytes).
+ 38i,13n,38p,789b,286s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on report.pdf (29 pages, 807170 bytes).
 PDF statistics:
- 198 PDF objects out of 1000 (max. 8388607)
- 123 compressed objects within 2 object streams
+ 222 PDF objects out of 1000 (max. 8388607)
+ 139 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 111 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 121 words of extra memory for PDF output out of 10000 (max. 10000000)
 

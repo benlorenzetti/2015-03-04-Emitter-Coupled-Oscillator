@@ -2,26 +2,26 @@
 * Nodes:
 * cc, ee, c8, b8, e8, c9, b9, e9, e3, e4, b567, e5, e6, e7
 
-Vcc cc gnd dc 12V ac 0V
-Vee ee gnd dc -12V ac 0V
-Rc1 cc c8 167
-Rc2 cc c9 167 
+Vcc cc gnd dc 24V ac 0V
+Vee ee gnd dc 0V ac 0V
+Rc1 cc c8 200
+Rc2 cc c9 200 
 Q1 c8 b8 e8 model8
 Q2 c9 b9 e9 model9
 Rb1 b8 e3 1000
 Rb3 b9 e4 1000
-Rb2 b8 ee 1000
-Rb4 b9 ee 1000
+Rb2 b8 ee 250
+Rb4 b9 ee 250
 Q3 cc c9 e3 model3
 Q4 cc c8 e4 model4
-Cc e8 e9 2E-11
+Cc e8 e9 42.9E-12
 Q5 e8 b567 e5 model5
 Q6 e9 b567 e6 model6
 Q7 b567 b567 e7 model7
 Rref cc b567 4k
-Re5 e5 ee 50
-Re6 e6 ee 50
-Re7 e7 ee 50
+Re5 e5 ee 2.2
+Re6 e6 ee 2.2
+Re7 e7 ee 2.2
 
 * .model <name> <type> (par1=value1 par2=value2 ...)
 * VAF = forward Early voltage
@@ -42,14 +42,6 @@ Re7 e7 ee 50
 .control
 set filetype=ascii
 * tran <tstep> <tstop> <tstart> <tmax> ; the last two are optional
-
-tran 1E-10 1E-6 1E-10
-plot v(c8)
-write advanced-transient.txt v(c8)
-
 tran 1E-10 101E-7 100E-7 1E-10
 plot v(c8) v(c9) 
 plot v(e8)-v(e9)
-write advanced-steady.txt v(c8) v(c9) v(e8)-v(e9)
-
-
