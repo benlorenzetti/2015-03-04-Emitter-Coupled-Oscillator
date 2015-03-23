@@ -14,6 +14,7 @@
 \contentsline {subsection}{\numberline {4.6}Advanced Circuit Design}{14}
 \contentsline {subsection}{\numberline {4.7}Advanced Circuit SPICE Simulation}{14}
 \contentsline {section}{\numberline {5}Results}{14}
-\contentsline {section}{\numberline {6}Appendices}{16}
-\contentsline {subsection}{\numberline {6.1}MATLAB Script for Frequency Function}{16}
-\contentsline {subsection}{\numberline {6.2}BJT Characterization Curves}{17}
+\contentsline {section}{\numberline {6}Appendices}{17}
+\contentsline {subsection}{\numberline {6.1}MATLAB Script for Frequency Function}{17}
+\contentsline {subsection}{\numberline {6.2}BJT Characterization Curves}{18}
+\contentsline {subsection}{\numberline {6.3}SPICE Netlist for Simple Circuit}{23}

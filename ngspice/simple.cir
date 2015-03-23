@@ -2,19 +2,19 @@
 * Nodes:
 * cc, ee, c1, b1, e1, c2, b2, e2
 
-Vcc cc gnd dc 5V ac 0V
+Vcc cc gnd dc 24V ac 0V
 Vee ee gnd dc 0V ac 0V
-Rc1 cc c1 50
-Rc2 cc c2 50 
+Rc1 cc c1 98.6
+Rc2 cc c2 98.2
 Q1 c1 b1 e1 model1
 Q2 c2 b2 e2 model2
-Re1 e1 ee 36
-Re2 e2 ee 36
-Rb1 b1 c2 500
-Rb3 b2 c1 500
-Rb2 b1 ee 500
-Rb4 b2 ee 500
-Cc e1 e2 1E-10
+Re1 e1 ee 899
+Re2 e2 ee 899
+Rb1 b1 c2 147.8
+Rb3 b2 c1 146.5
+Rb2 b1 ee 1791
+Rb4 b2 ee 1796
+Cc e1 e2 50.4E-12
 
 
 * .model <name> <type> (par1=value1 par2=value2 ...)
@@ -39,6 +39,5 @@ write simple-transient.txt v(c1)
 tran 1E-10 101E-7 100E-7 1E-10
 plot v(c1) v(c2) 
 plot v(e1)-v(e2)
-write simple-steady.txt v(c1) v(c2) v(e1)-v(e2)
 
 
