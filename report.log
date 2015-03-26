@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.28)  23 MAR 2015 16:18
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.13)  26 MAR 2015 08:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **report.tex
 (./report.tex
 LaTeX2e <2011/06/27>
-Babel <3.9h> and hyphenation patterns for 78 languages loaded.
+Babel <3.9h> and hyphenation patterns for 2 languages loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
@@ -443,11 +443,11 @@ Package pdftex.def Info: diagrams/simple-circuit.png used on input line 678.
 (pdftex.def)             Requested size: 216.81pt x 121.57103pt.
  [13] [14] [15]
 Package epstopdf Info: Source file: <ngspice/simple-circuit-output-50pF.eps>
-(epstopdf)                    date: 2015-03-23 13:47:08
+(epstopdf)                    date: 2015-03-26 07:41:51
 (epstopdf)                    size: 23286 bytes
 (epstopdf)             Output file: <ngspice/simple-circuit-output-50pF-eps-con
 verted-to.pdf>
-(epstopdf)                    date: 2015-03-23 14:06:16
+(epstopdf)                    date: 2015-03-26 07:41:51
 (epstopdf)                    size: 8714 bytes
 (epstopdf)             Command: <repstopdf --outfile=ngspice/simple-circuit-out
 put-50pF-eps-converted-to.pdf ngspice/simple-circuit-output-50pF.eps>
@@ -463,11 +463,11 @@ Package pdftex.def Info: ngspice/simple-circuit-output-50pF-eps-converted-to.pd
 f used on input line 827.
 (pdftex.def)             Requested size: 195.12767pt x 195.1294pt.
 Package epstopdf Info: Source file: <ngspice/simple-circuit-vcap-50pF.eps>
-(epstopdf)                    date: 2015-03-23 13:47:58
+(epstopdf)                    date: 2015-03-26 07:41:51
 (epstopdf)                    size: 16633 bytes
 (epstopdf)             Output file: <ngspice/simple-circuit-vcap-50pF-eps-conve
 rted-to.pdf>
-(epstopdf)                    date: 2015-03-23 14:06:38
+(epstopdf)                    date: 2015-03-26 07:41:51
 (epstopdf)                    size: 8349 bytes
 (epstopdf)             Command: <repstopdf --outfile=ngspice/simple-circuit-vca
 p-50pF-eps-converted-to.pdf ngspice/simple-circuit-vcap-50pF.eps>
@@ -487,11 +487,11 @@ used on input line 834.
  <./ngspice/simple-circuit-output-50pF-eps-converted-to.pdf> <./ngspice/simple-
 circuit-vcap-50pF-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <ngspice/advanced-circuit-output-43pF.eps>
-(epstopdf)                    date: 2015-03-23 14:58:41
+(epstopdf)                    date: 2015-03-26 07:41:51
 (epstopdf)                    size: 27967 bytes
 (epstopdf)             Output file: <ngspice/advanced-circuit-output-43pF-eps-c
 onverted-to.pdf>
-(epstopdf)                    date: 2015-03-23 15:07:00
+(epstopdf)                    date: 2015-03-26 07:41:51
 (epstopdf)                    size: 10431 bytes
 (epstopdf)             Command: <repstopdf --outfile=ngspice/advanced-circuit-o
 utput-43pF-eps-converted-to.pdf ngspice/advanced-circuit-output-43pF.eps>
@@ -507,11 +507,11 @@ Package pdftex.def Info: ngspice/advanced-circuit-output-43pF-eps-converted-to.
 pdf used on input line 890.
 (pdftex.def)             Requested size: 216.81pt x 216.81139pt.
 Package epstopdf Info: Source file: <ngspice/advanced-circuit-vcap-43pF.eps>
-(epstopdf)                    date: 2015-03-23 14:59:32
+(epstopdf)                    date: 2015-03-26 07:41:51
 (epstopdf)                    size: 16641 bytes
 (epstopdf)             Output file: <ngspice/advanced-circuit-vcap-43pF-eps-con
 verted-to.pdf>
-(epstopdf)                    date: 2015-03-23 15:07:00
+(epstopdf)                    date: 2015-03-26 07:41:51
 (epstopdf)                    size: 8229 bytes
 (epstopdf)             Command: <repstopdf --outfile=ngspice/advanced-circuit-v
 cap-43pF-eps-converted-to.pdf ngspice/advanced-circuit-vcap-43pF.eps>
@@ -693,12 +693,12 @@ File: ngspice/advanced.cir  (verbatim)
 
 ] [32] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 4591 strings out of 493304
- 70941 string characters out of 6139871
- 149990 words of memory out of 5000000
- 7928 multiletter control sequences out of 15000+600000
+ 4591 strings out of 495028
+ 70941 string characters out of 6181497
+ 145704 words of memory out of 5000000
+ 7679 multiletter control sequences out of 15000+600000
  9191 words of font info for 34 fonts, out of 8000000 for 9000
- 957 hyphenation exceptions out of 8191
+ 14 hyphenation exceptions out of 8191
  38i,13n,38p,789b,286s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
@@ -718,7 +718,7 @@ sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on report.pdf (34 pages, 1051515 bytes).
+Output written on report.pdf (34 pages, 1055876 bytes).
 PDF statistics:
  246 PDF objects out of 1000 (max. 8388607)
  150 compressed objects within 2 object streams

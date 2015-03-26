@@ -1117,4 +1117,30 @@ on the circuit diagram and the values correspond to the design values in table
 
 \verbatiminput{ngspice/advanced.cir}
 
+\subsection{Switching Time Constant}
+
+Using Gray-Searle, open circuit technique to analyze $C_{\mu}$ and $C_{\pi}$.
+
+\begin{equation}
+R_{\mu}^{0}=R_{eq2}*\frac
+{1-\left(\frac{V_{T}}{R_{E}I_{E}}\right) \left( \frac{1}{R_{eq1}}+\frac{1}{R_{eq2}}\right)-\frac{1}{R_{E}}-\frac{1}{r_{\pi}}}
+{1-\left(\frac{V_{T}}{R_{E}I_{E}}\right) \left( \frac{1}{R_{eq1}} \right) -\frac{1}{R_{E}(\beta+1)}-\frac{1}{r_{\pi}}}
+\end{equation}
+
+\begin{equation}
+R_{\pi}^{0}=\frac{r_{\pi}(R_{eq1}+R_{E})}{r_{\pi}+R_{eq1}+R_{E}(\beta+1)}
+\end{equation}
+
+where
+\begin{equation}
+\left\{\begin{array}{lr}
+R_{eq1}=R_{2}||(R_{1}+R_{C})=\frac{R_{2}(R_{1}+R_{C})}{R_{1}+R_{2}+R_{C}}	\\
+R_{eq2}=R_{C}||(R_{1}+R_{2})=\frac{R_{C}(R_{1}+R_{2})}{R_{1}+R_{2}+R_{C}}
+\end{array}\right.
+\end{equation}
+
+\begin{equation}
+\tau_{switching}=R_{\mu}^{0}C_{\mu}+R_{\pi}^{0}C_{\pi}
+\end{equation}
+
 \end{document}
