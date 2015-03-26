@@ -395,7 +395,7 @@ v_{E(off)}(t)=[2V_{E(sat)}-V_{E(trig)}]e^{\nicefrac{-t}{R_{E}C_{E}}}
 
 The lifetime of this output state is as long as it takes for $v_{E(off)}$ to reach $V_{E(trig)}$.
 \begin{equation*}
-V_{E(trig)}=[2V_{E(sat)}-V_{E(trig)}]e^{\nicefrac{-T_{stability}}{R_{E}C_{E}}}
+v_{E(trig)}=[2V_{E(sat)}-V_{E(trig)}]e^{\nicefrac{-T_{stability}}{R_{E}C_{E}}}
 \end{equation*}
 
 \begin{equation*}
@@ -1141,6 +1141,24 @@ R_{eq2}=R_{C}||(R_{1}+R_{2})=\frac{R_{C}(R_{1}+R_{2})}{R_{1}+R_{2}+R_{C}}
 
 \begin{equation}
 \tau_{switching}=R_{\mu}^{0}C_{\mu}+R_{\pi}^{0}C_{\pi}
+\end{equation}
+
+\begin{equation}
+V_{B(sat)}=V_{CC}-2V_{pkpk}
+\end{equation}
+
+\begin{equation}
+\left\{\begin{array}{lr}
+V_{B(sat)}=V_{CC}-2V_{pkpk}	\\
+V_{B(off)}<V_{E(off)}+V_{BE(on)}
+\end{array}\right.
+\end{equation}
+
+\begin{equation}
+\left\{\begin{array}{lr}
+V_{B(sat)}=\frac{R_{2}}{R_{1}+R_{2}}(V_{CC}-V_{pkpk})	\\
+V_{B(off)}=\frac{R_{2}}{R_{1}+R_{2}}(V_{CC}-2V_{pkpk})
+\end{array}\right.
 \end{equation}
 
 \end{document}
